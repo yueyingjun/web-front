@@ -1,0 +1,20 @@
+body{margin:0;padding:0;height:5000px;}
+.test{
+    width:200px; height:200px; border:1px solid #e07f71;
+    background-color:#a4a4f4; margin:200px;
+    border-radius:10px; float:left;
+    -webkit-animation-duration:.1s;
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-timing-function:ease;
+    -webkit-animation-fill-mode:forwards;
+}
+#test{-webkit-transform:translate3d(-2200px,0,0);}
+#test2{-webkit-transform:translate3d(2200px,0,0);}
+@-webkit-keyframes fanzhefei{
+    0%{-webkit-transform:translate3d(1200px,0,0)}
+    100%{-webkit-transform:translate3d(0,0,0)}
+}
+@-webkit-keyframes fei{
+    0%{-webkit-transform:translate3d(-1200px,0,0)}
+    100%{-webkit-transform:translate3d(0,0,0)}
+}

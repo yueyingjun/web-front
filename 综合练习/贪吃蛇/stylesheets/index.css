@@ -1,0 +1,17 @@
+.sence{
+    box-shadow:0 0 10px black inset;
+    width:600px;
+    height:600px;
+    border:1px solid black;
+    border-right:none;
+    border-bottom:none;
+    background-color:black;
+    margin:0 auto;
+}
+.block{
+    background-color:white;
+    width:59px;
+    height:59px;
+    margin:0 1px 1px 0;
+    float:left;
+}

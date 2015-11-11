@@ -1,0 +1,50 @@
+#sence,.sence{
+    position:relative;
+    width:600px;
+    height:600px;
+    background:rgb(238,236,236);
+    margin:30px auto;
+    box-shadow:1px 3px 13px black;
+    border-radius:6px;
+}
+.block{
+    /* background:white; */
+    margin:0 1px 1px 0px;
+    float:left;
+    text-align:center;
+    position:relative;
+    z-index:8884;
+    border-radius:50%;
+    /* box-shadow:0 3px 12px black; */
+}
+.hang,.lie{
+    background:#9f9999;
+    position:absolute;
+}
+.hang{
+    width:600px;
+    height:1px;
+}
+.lie{
+    height:600px;
+    width:1px;
+}
+.aa , .bb{
+    width:140px;
+    height:140px;
+    border:1px solid black;
+    float:left;
+    margin:20px;
+    text-align:center;
+    line-height:140px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+.aa{
+    background:#d3a212;
+}
+.bb{
+    opacity:0;
+    background:#ad8;
+}

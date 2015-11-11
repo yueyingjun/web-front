@@ -1,0 +1,79 @@
+body  {height:2000px;  margin:0; font-family:"微软雅黑";}
+.clear{clear:both;}
+.aa   {width:900px; height:100px; border:1px solid #e07f71; background-color:#f4f4f4;}
+.test {width:1000px; margin:50px auto; height:500px; border:1px solid black; position:relative;}
+
+/*标签选择器*/
+h1{
+    /*基本属性*/
+    width:300px;
+    height:200px;
+    border:1px solid black;
+    background-color:#ffc321;
+}
+
+.title{
+    /*文字相关的属性*/
+    font-family:"宋体";
+    font-size:24px;
+    color:#ffffff;
+    text-align:center;
+    line-height:45px;
+    font-weight:bold;
+    font-style:italic;
+    text-decoration:underline;
+}
+
+.test h1{
+    /*位置相关的属性*/
+    margin:10px 20px 40px;
+    padding:23px 40px 12px 33px;
+    /*浮动和定位*/
+    float:left;
+    /*浮动和 绝对定位 永远不要同时作用于一个元素*/
+}
+.test .title{position:absolute; top:0; left:0;}
+.test .dier {top:30px; left:50px; background:#afcc02;}
+.test .diyi {z-index:1;}
+
+#diyi{
+    background-color:black;
+    background-image:url(../image/logo.png);
+    background-repeat:no-repeat;
+    background-position:bottom center;
+}
+/*交叉选择器*/
+.title#diyi{
+    /*特效相关的属性*/
+    border-radius:30px;
+    box-shadow:40px 20px 34px black;
+    /* background-image:linear-gradient(black,red,white); */
+    /* background-image:radial-gradient(black,white); */
+    /* opacity:0.3; */
+    background-color:rgba(0,0,0,0.2);
+    /*监视者*/
+    transition:all 1s cubic-bezier(0.26,-0.59,0.47,1.99);
+}
+.title#diyi:hover{
+    border-radius:60px;
+    -webkit-transform:rotateZ(45deg);
+}
+h1,h2,h3,h4,h5,h6,ul,li,p{
+    margin:0;
+    padding:0;
+}
+a,em,span{
+    border:1px solid black;
+    width:200px;
+    height:200px;
+    padding:10px;
+    margin:10px;
+}
+.span{
+    font-weight:bold;
+    font-style:italic;
+    text-decoration:underline;
+    display:block;
+    border:4px double red;
+}
+/*对行内元素使用浮动和绝对定位会让他们转变为块元素*/

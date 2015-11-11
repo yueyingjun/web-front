@@ -1,0 +1,39 @@
+body{
+    margin:0;
+    font-family:"Cooper";
+    font-size:18px;
+}
+#time{
+    position: fixed;
+    width:100px;
+    height:50px;
+    color:white;
+    background: black;
+    opacity:0.8;
+    top:60px;
+    left:20px;
+    text-align: center;
+    line-height: 50px;
+}
+.sence{
+    width:920px;
+    margin:60px auto;
+}
+.sence:after{
+    display:block;
+    content:" ";
+    clear:both;
+}
+.key{
+    background:black;
+    text-align:center;
+    line-height:80px;
+    color:white;
+    float:left;
+    width:80px;
+    height:80px;
+    border:1px solid black;
+    margin:5px;
+    box-shadow:0 5px 8px black;
+    border-radius:8px;
+}

@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #aaa;
+    font-family: 'Microsoft Yahei';
+}
+.clearfix{
+    clear: both;
+}
+.status-bar{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    width:100%;
+    height: 40px;
+    line-height: 40px;
+}
+.shuzi{
+    background: #ddd!important;
+}
+.fuhao{
+    background: #ccc!important;
+}
+.fuhao1{
+    background: #bbb!important;
+}
+.layout-n{
+    width: 540px;
+    height: 960px;
+    margin: 0 auto;
+}
+.layout-n .disp_window{
+    background: #f9f9f9;
+    width: 100%;
+    height: 210px;
+}
+.disp_window .line1{
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: right;
+    width: 90%;
+    height: 100px;
+    line-height: 90px;
+    font-size: 50px;
+}
+.disp_window .line2{
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: right;
+    width: 90%;
+    height: 130px;
+    line-height: 120px;
+    font-size: 85px;
+}
+.layout-n .keyboard{
+    width: 100%;
+    height: 600px;
+}
+.layout-n .keyboard .key{
+    transition: all 0.3s ease;
+    font-size: 24px;
+    background: #eee;
+    text-align: center;
+    width: 135px;
+    height: 118.3px;
+    line-height: 118.3px;
+    float: left;
+}
+.layout-n .keyboard .wide-key{
+    width: 270px;
+}
+.layout-n .keyboard .tall-key{
+    background:rgb(20,150,100) ;
+    float: right;
+    height: 236.6px;
+    line-height: 236.6px;
+}
+.layout-n .key:hover{
+    background: rgb(50,180,200)!important;
+    font-size: 28px;
+    font-weight: bold;
+}
+.layout-n .key:active{
+    background: rgb(50,150,200)!important;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.layout-s{
+    width: 960px;
+    height: 540px;
+    margin: 0 auto;
+}
+.layout-s .disp_window{
+    background: #f9f9f9;
+    width: 100%;
+    height: 160px;
+}
+.layout-s .disp_window .line1{
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: right;
+    width: 95%;
+    height: 70px;
+    line-height: 70px;
+    font-size: 45px;
+}
+.layout-s .disp_window .line2{
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: right;
+    width: 95%;
+    height: 90px;
+    line-height: 90px;
+    font-size: 70px;
+}
+.layout-s .keyboard{
+    overflow: hidden;
+    width: 100%;
+    height: 337px;
+}
+.layout-s .keyboard .key{
+    transition: all 0.3s ease;
+    font-size: 20px;
+    background: #eee;
+    text-align: center;
+    width: 120px;
+    height: 56.6px;
+    line-height: 56.6px;
+    float: left;
+}
+.layout-s .keyboard .wide-key{
+    width: 240px;
+
+}
+.layout-s .keyboard .tall-key{
+    background:rgb(20,150,100) ;
+    float: right;
+    height: 113px;
+    line-height: 113px;
+}
+.layout-s .key:hover{
+    background: rgb(50,180,200)!important;
+    font-size: 22px;
+    font-weight: bold;
+}
+.layout-s .key:active{
+    background: rgb(50,150,200)!important;
+    font-size: 18px;
+    font-weight: bold;
+}
