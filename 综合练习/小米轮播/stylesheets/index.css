@@ -1,0 +1,126 @@
+body{
+    margin:0;
+}
+.nav{
+    position:absolute;
+    background:rgba(0,0,0,0.6);
+    width:234px;
+    height:460px;
+    top:0;
+    left:0;
+    z-index:8888;
+}
+.ui-wrapper{
+    width:1226px;
+    margin:30px auto;
+    position:relative;
+}
+.ui-viewport{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 460px;
+}
+#J_homeSlider{
+    width:auto;
+    position:relative;
+}
+.slide{
+    position: absolute;
+    width: 1226px;
+    z-index: 0;
+    display: none;
+}
+.show{
+    display:block;
+}
+.ui-pager{
+    bottom: 20px;
+    color: rgb(102, 102, 102);
+    display: block;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 18px;
+    left: auto;
+    line-height: 18px;
+    position: absolute;
+    right: 30px;
+    text-align: right;
+    width: 400px;
+    z-index: 999;
+}
+.ui-controls-direction{
+    line-height:21px;
+    font-size:14px;
+    color:rgb(51,51,51);
+}
+.ui-pager-item{
+    color: rgb(102, 102, 102);
+    display: inline-block;
+    height: 10px;
+    line-height: 18px;
+    text-align: right;
+    width: 20px;
+}
+
+.ui-pager-link{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 5px;
+    border: 2px solid #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    text-align: left;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: #f5f5f5;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-transition: all 0.2s;
+}
+.ui-pager-link:hover{
+    background: #fff;
+    border-color: #757575;
+    border-color: rgba(0, 0, 0, 0.4)
+}
+
+.ui-prev{
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    width: 41px;
+    height: 69px;
+    margin-top: -35px;
+    text-indent: -9999px;
+    overflow: hidden;
+    _zoom: 1;
+    outline: 0;
+    left: 234px;
+    background: url(http://c1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -84px 50%
+}
+.ui-next{
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    width: 41px;
+    height: 69px;
+    margin-top: -35px;
+    text-indent: -9999px;
+    overflow: hidden;
+    _zoom: 1;
+    outline: 0;right: 0;
+    background: url(http://c1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -125px 50%
+}
+.ui-next:hover{
+    background-position: -42px 50%;
+}
+.ui-prev:hover{
+    background-position: 0 50%;
+}
+.active{
+    background: #fff;
+    border-color: #757575;
+    border-color: rgba(0, 0, 0, 0.4)
+}

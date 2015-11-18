@@ -90,7 +90,7 @@ window.onload = function(){//time
   //   location.reload();
   // }, 4000);
 
-  var els = document.getElementsByClassName('item');
+  // var els = document.getElementsByClassName('item');
 
   //如果元素的行内样式上有某个css属性,我们可以通过  元素.style.属性 取出它
   // els[0].style.width = '300px';
@@ -128,28 +128,122 @@ window.onload = function(){//time
 
 
   //选取元素
-  var dians = document.getElementsByClassName('xiao');
-  var kuais = document.getElementsByClassName('ccc');
-  var tiao = document.getElementById('fix');
-  var cha = tiao.getBoundingClientRect().top;
-  var timerId,start,end,xishu;
-  for ( var i = 0;  i < dians.length;  i++){
-    dians[i].index = i;
-    dians[i].onclick = function(){
-      start = document.body.scrollTop;
-      end =  kuais[this.index].offsetTop - cha;
-      var off = Math.abs(start-end)/20;
-      if(start < end){xishu = 1;}else{xishu = -1;}
-      clearInterval(timerId);
-      timerId = setInterval(function(){
-        document.body.scrollTop = start;
-        start += off*xishu;
-        if( (xishu>0)?(start>end):(start<end)  ){
-          clearInterval(timerId);
-        }
-      },1);//20ms
-    };
-  }
+  // var dians = document.getElementsByClassName('xiao');
+  // var kuais = document.getElementsByClassName('ccc');
+  // var tiao = document.getElementById('fix');
+  // var cha = tiao.getBoundingClientRect().top;
+  // var timerId,start,end,xishu;
+  // for ( var i = 0;  i < dians.length;  i++){
+  //   dians[i].index = i;
+  //   dians[i].onclick = function(){
+  //     start = document.body.scrollTop;
+  //     end =  kuais[this.index].offsetTop - cha;
+  //     var off = Math.abs(start-end)/20;
+  //     if(start < end){xishu = 1;}else{xishu = -1;}
+  //     clearInterval(timerId);
+  //     timerId = setInterval(function(){
+  //       document.body.scrollTop = start;
+  //       start += off*xishu;
+  //       if( (xishu>0)?(start>end):(start<end)  ){
+  //         clearInterval(timerId);
+  //       }
+  //     },1);//20ms
+  //   };
+  // }
 
 
+  // 选取元素
+  //  document.getElementById()
+  //  document.getElementsByClassName()
+
+  //  document.getElementsByTagName()
+  //  document.getElementsByName()
+
+  //  document.querySelector();
+  //  document.querySelectorAll();
+  //  document.createElement('div');
+
+  //  parentNode previusSibing nextSibling  firstChild  lastChild  childNodes
+
+  // setAttribute  getAttribute  hasAttribute removeAttribute
+  // id  className
+
+
+  // parent.insertBefore();
+  // parent.appendChild();
+  // parent.removeChild();
+
+  // el.cloneNode(true);
+
+
+  // el.offsetTop  offsetHeight  offsetTop offsetLeft  offsetParent
+
+  // getBoundingClientRect();
+  // getComputedStyle()  currentStyle
+
+  // innerHTML
+
+  // document.documentElement.clientWidth
+  // document.documentElement.clientHeight
+
+  // document.documentElement.scrollTop
+  // document.documentElement.scrollLeft
+  // document.body.scrollTop
+  // document.body.scrollLeft
+
+  Node.prototype.offsetPostion = function(){
+    var parent = this.offsetParent;
+    var top = this.offsetTop;
+    var left = this.offsetLeft;
+    while(parent){
+      top += parent.offsetTop;
+      left += parent.offsetLeft;
+      parent = parent.offsetParent;
+    }
+    return {top:top,left,left};
+  };
+  // var el = document.getElementById('test3');
+  // console.log( el.offsetPostion() );
+  // Element.prototype.makeDragAble = function(){
+  //   var that  = this;
+
+  //   var docmoveHandler  = function(){
+
+  //   };
+
+  //   var docMouseUpHandler = function(){
+  //     document.removeEventListener('mousemove',docmoveHandler);
+  //     document.removeEventListener('mouseup',docMouseUpHandler);
+  //   };
+
+  //   var mousedownHandler = function(){
+  //     document.addEventListener('mouseup',docMouseUpHandler);
+  //     document.addEventListener('mousemove',docmoveHandler);
+  //   };
+
+  //   this.addEventListener('mousedown',mousedownHandler);
+  // };
+  // (function(){
+  //   var d  = document;
+  //   var jQuery = function(id){
+  //     this.data =  d.getElementById(id);
+  //   };
+  //   jQuery.prototype.addClass = function(s){
+  //     this.data.setAttribute('class',s);
+  //   };
+  //   var $ = function(id){
+  //     return new jQuery(id);
+  //   };
+  //   window.$ = $;
+
+  // })();
+  // $('test3').addClass('a b c d e f');
+  // var callbackFunction = function(data) {
+  //   var wind = data.query.results.channel.wind;
+  //   alert(wind.chill);
+  // };
 };
+  var callbackFunction = function(data) {
+    var wind = data.query.results.channel.wind;
+    alert(wind.chill);
+  };

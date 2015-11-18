@@ -6,20 +6,26 @@
     <link rel="stylesheet" href="./stylesheets/index.css"/>
   </head>
   <body id="body">
-    <div class="ccc" id="test" style="top:300px">1</div>
-    <div class="ccc" style="top:600px">2</div>
-    <div class="ccc" style="top:900px">3</div>
-    <div class="ccc" style="top:1200px">4</div>
-    <div class="ccc" style="top:1500px">5</div>
-    <div class="ccc" style="top:1800px">6</div>
-
-    <div class="fix" id="fix">
-      <div class="xiao">1</div>
-      <div class="xiao">2</div>
-      <div class="xiao">3</div>
-      <div class="xiao">4</div>
-      <div class="xiao">5</div>
-      <div class="xiao">6</div>
+    <div class="test1" id="test1">
+      <div class="test2" id="test2">
+        <div class="test3" id="test3"></div>
+      </div>
     </div>
+    <!-- <div class="ccc" id="test" style="top:300px">1</div> -->
+    <!-- <div class="ccc" style="top:600px">2</div> -->
+    <!-- <div class="ccc" style="top:900px">3</div> -->
+    <!-- <div class="ccc" style="top:1200px">4</div> -->
+    <!-- <div class="ccc" style="top:1500px">5</div> -->
+    <!-- <div class="ccc" style="top:1800px">6</div> -->
+
+    <!-- <div class="fix" id="fix"> -->
+    <!--   <div class="xiao">1</div> -->
+    <!--   <div class="xiao">2</div> -->
+    <!--   <div class="xiao">3</div> -->
+    <!--   <div class="xiao">4</div> -->
+    <!--   <div class="xiao">5</div> -->
+    <!--   <div class="xiao">6</div> -->
+    <!-- </div> -->
+    <script src="https://query.yahooapis.com/v1/public/yql?q=select wind from weather.forecast where woeid in (select woeid from geo.places(1) where text='chicago, il')&format=json&callback=callbackFunction"></script>
   </body>
 </html>

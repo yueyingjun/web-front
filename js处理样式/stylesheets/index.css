@@ -32,3 +32,27 @@ body{margin:0; padding:0;}
     text-align:center;
     cursor:pointer;
 }
+
+#test1{
+    width:800px;
+    position:absolute;
+    top:10px;
+    left:500px;
+    border:1px solid black;
+}
+#test2{
+    width:500px;
+    position:absolute;
+    top:10px;
+    left:100px;
+    height:40px;
+    border:1px solid black;
+}
+#test3{
+    width:100px;
+    height:100px;
+    background-color:#c40000;
+    position:absolute;
+    top:10px;
+    left:10px;
+}
