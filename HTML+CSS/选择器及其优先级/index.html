@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>选择器及其优先级</title>
+    <link rel="stylesheet" href="./css/index.css"/>
+  </head>
+  <body>
+    <p>选择<strong>器</strong>及其<b>优</b>先级选<em>择器</em>及其优先<i>级选</i>择器及其<a href="#">优</a>先级选择<s>器及</s>其优先级选择器及其<span class="aa">优先</span>级</p>
+    /*让a标签出现在字或者图片的两侧*/
+    <a href="#"><img src="xx" /></a>
+
+    <!--行内元素不能设置宽高   margin-top  margin-bottom
+        也不能设置. margin只有左右没有上下
+      -->
+    <!-- display:block 可以把行内元素转成块元素 -->
+    .header a{
+         display:block;
+    }
+
+
+    <div class="item"><a  class="link-small" href="#">在线商场</a> </div>
+
+    <!-- <div class="footer"> -->
+    <!--   <ul> -->
+    <!--     <li></li> -->
+    <!--     <li>1</li> -->
+    <!--     <li>1</li> -->
+    <!--     <li>1</li> -->
+    <!--   </ul> -->
+    <!-- </div> -->
+    <!-- <div class="content"> -->
+    <!--   <a href="http://www.baidu.com">百度</a> -->
+    <!--   <h1>选择器及其优先级</h1> -->
+    <!--   <p class="item" id="first">我爱北京天安门</p> -->
+    <!--   <p class="item">我爱北京天安门</p> -->
+    <!--   <p class="item">我爱北京天安门</p> -->
+    <!--   <p class="item">我爱北京天安门</p> -->
+    <!--   <p>我爱北京天安门</p> -->
+    <!--   <p>我爱北京天安门</p> -->
+    <!-- </div> -->
+    <!-- <div class="content"> -->
+    <!--   <h3 class="test aa" id="test">优先级</h3> -->
+    <!-- </div> -->
+  </body>
+</html>

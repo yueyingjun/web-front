@@ -1,0 +1,72 @@
+body{
+    margin:0;
+    font-family:"微软雅黑";
+}
+.test{
+    width:900px;
+    height:300px;
+    border:1px solid black;
+    margin:0 auto;
+    background-color:black;
+    background-image:url("../img/logo.png");
+    background-repeat:no-repeat;
+    background-position:100px 50px;
+    /*color  image   repeat  position*/
+    background:black url("../img/logo.png")  no-repeat 100px 50px;
+}
+.red{
+    width:100px;
+    height:100px;
+    background-color:red;
+}
+.sub-header{
+    height:200px;
+    margin-top:20px;
+    border:1px solid black;
+    background-image:url("../img/global-gray-bg.jpg");
+    background-repeat:repeat-x;
+    background-color:rgb(221, 222, 226);
+}
+.container{
+    width:846px;
+    margin:0 auto;
+}
+
+.clear{
+    clear:both;
+}
+
+h5,h6{
+    margin:0;
+}
+.section{
+    margin-top:30px;
+}
+.item{
+    width:280px;
+    height:150px;
+    float:left;
+    text-align:center;
+}
+.img{
+    width:36px;
+    height:36px;
+    margin:33px auto 5px;
+}
+.item h5{
+    font-size:15px;
+    line-height:28px;
+}
+.item h6{
+    font-size:10px;
+    color:#a8a8a8;
+}
+.img{
+    background-image:url("../img/shopping-info.png");
+}
+.er{
+    background-position:-47px 0;
+}
+.san{
+    background-position:-150px 0;
+}

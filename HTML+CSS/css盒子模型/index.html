@@ -1,0 +1,99 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>盒子模型</title>
+	<style>
+		#da{
+			border:1px solid black;
+			width:300px;
+			/*background: #192010;*/
+			font-size:2em;
+		}
+		#xiao{
+			border:1px solid red;
+			line-height:100px;
+			color:white;
+			width:100px;
+
+			/*边距相关的属性*/
+			margin-left:100px;
+			margin-top:80px;
+			margin-bottom:20px;
+		}
+		#xiao2{
+			border:1px solid black;
+			width:150px;
+			height:100px;
+			/*padding-left和padding-right
+			会增加盒子的宽度*/
+			/*padding-top 和 padding-bottom
+			会增加盒子的高度
+			*/
+			padding-left:30px;
+			padding-top:30px;
+			padding-bottom:40px;
+			padding-right:40px;
+		}
+
+		/*h4{
+			margin-left:30px;
+		}
+		h5{
+			margin-left:30px;
+		}*/
+		#test{
+			/*基本属性*/
+			width:300px;
+			height:300px;
+			border:1px solid black;
+			/*background:#f10981;*/
+
+			/*位置相关*/
+			margin-left:200px;
+			margin-top:100px;
+			margin-bottom:120px;
+			margin-right:20px;
+			padding-left:100px;
+			padding-right:20px;
+			padding-top:20px;
+			padding-bottom:20px;
+
+			/*文字相关的这一组属性具有传承性*/
+			font-family:"微软雅黑";
+			font-size:2em;
+			color:blue;
+			text-align:center;
+			line-height:300px;
+		}
+		.juzhong{
+			width:800px;
+			height:200px;
+			border:1px solid black;
+			margin-left:auto;
+			margin-right:auto;
+		}
+
+		www.github.com
+	</style>
+</head>
+<body>
+	<div class="juzhong">
+	</div>
+
+
+
+
+
+	<div id="da">
+		<div id="xiao">这是小div</div>
+		<div id="xiao2">
+			<h4>四级标题<h4>
+			<h5>五级标题</h5>
+		</div>
+	</div>
+	<div id="test">
+		测试文字属性
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+body{
+    margin:0;
+    font-family:"微软雅黑";
+}
+/* .content{ */
+/*     width:900px; */
+/*     border:1px solid black; */
+/*     margin:20px auto; */
+/*     padding-left:40px; */
+/*     color:#ff0010; */
+/* } */
+
+/* a{ */
+/*     color:black; */
+/*     text-decoration:none; */
+/* } */
+/* /\*标签选择器 作用于所有的同类标签*\/ */
+/* p{ */
+/*     font-size:2em; */
+/* } */
+/* /\*类名选择器*\/ */
+/* .item{ */
+/*     font-size:1em; */
+/* } */
+/* /\*id选择器*\/ */
+/* #first{ */
+/*     color:#ff0011; */
+/* } */
+
+/* /\*以空格隔开  后代选择器*\/ */
+/* .content p{ */
+/*     background:black; */
+/* } */
+
+/* /\*以逗号隔开,基本选择器的组合   群组选择器*\/ */
+/* h1,p, .cotent p, .content h1{ */
+/*     color:#08ff01; */
+/* } */
+
+
+/* /\* */
+/* 标签选择器 */
+/* 类名选择器 */
+/* id选择器 */
+
+/* 后代选择器 */
+/* 群组选择器 */
+/*  *\/ */
+/* h3{ */
+/*     font-size:3em; */
+/* } */
+/* .test{ */
+/*     font-size:4em; */
+/* } */
+/* .aa{ */
+/*     font-size:8em; */
+/* } */
+/* #test{ */
+/*     font-size:5em; */
+/* } */
+/* .content h3{ */
+/*     font-size:6em; */
+/* } */
+/* .content .test{ */
+
+/* } */
+
+.aa{
+    color:red;
+}

@@ -1,0 +1,55 @@
+body{
+    font-family:"微软雅黑";
+    margin:0;
+    min-width:980px;
+}
+.clear{
+    clear:both;
+}
+
+ul,li{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+ul{
+}
+li{
+    float:left;
+}
+.da{
+    width:800px;
+    border:3px solid #62a428;
+    background-color:#f4f4f4;
+    margin:0 auto;
+    /*解决内元素浮动后大盒子的收缩*/
+    /*给大盒子加上overflow:hidden以后它内部的元素全部浮动之后,
+     大盒子不会收缩.*/
+}
+.hei{
+    width:400px;
+    height:300px;
+    background-color:black;
+}
+.da2{
+    width:800px;
+    height:100px;
+    background-color:#f02912;
+    margin:0 auto;
+    /*overflow:hidden的本意是隐藏超出大div的元素*/
+    overflow:hidden;
+}
+.logo{
+    width:100px;
+    height:50px;
+    border:1px solid red;
+    float:left;
+}
+.xiao{
+    width:100px;
+    height:50px;
+    border: 1px solid #999;
+    /*1.如果一些元素想在一行内横排,
+     那么所有的这些元素都要有浮动属性 (display:block)*/
+    float:left;
+}

@@ -1,0 +1,151 @@
+body{
+    margin:0;
+    font-family:"微软雅黑";
+}
+.test{
+    width:600px;
+    height:200px;
+    background:#ff0119;
+    transition:all .6s ease;
+    -webkit-transition:all .6s ease;
+    -moz-transition:all .6s ease;
+    -o-transition:all .6s ease;
+}
+.test:hover{
+    background:#00f02a;
+    width:800px;
+}
+
+.content{
+    width:1000px;
+    margin:20px auto;
+    border:1px solid black;
+    border-radius:5px;
+}
+.block{
+    border:1px solid black;
+    padding:20px;
+    margin:20px;
+    float:left;
+}
+.clear{
+    clear:both;
+}
+ul,li{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.block li{
+    width:200px;
+    height:40px;
+    line-height:40px;
+    border:1px solid black;
+    margin:5px;
+    padding-left:16px;
+    transition:all .8s ease;
+    -webkit-transition:all .8s ease;
+    -moz-transition:all .8s ease;
+    -o-transition:all .8s ease;
+}
+.block .title{
+    padding-left:0px;
+    font-size:18px;
+    font-weight:bold;
+    line-height:45px;
+    border:none;
+}
+.width:hover{
+    width:100px;
+}
+.border-left:hover{
+    border-left:10px solid #331021;
+    width:191px;
+}
+.border-right:hover{
+    border-right:20px solid #102012;
+    width:181px;
+}
+.border-bottom:hover{
+    border:none;
+    border-bottom:30px solid #ff0121;
+}
+.border-top:hover{
+    border:none;
+    border-top:10px solid #45f;
+}
+.background-color:hover{
+    background-color:#102192;
+    color:white;
+}
+.background-image:hover{
+    background-image:url("../global-gray-bg.jpg");
+    background-repeat:no-repeat;
+}
+.background-repeat{
+    background-image:url("../global-gray-bg.jpg");
+    background-repeat:no-repeat;
+}
+.background-repeat:hover{
+    background-repeat:repeat-x;
+}
+.background-position{
+    background-image:url("../global-gray-bg.jpg");
+    background-position:20px 0;
+    background-repeat:no-repeat;
+}
+.background-position:hover{
+    background-position:100px 0;
+}
+.height:hover{
+    height:80px;
+    line-height:80px;
+}
+.margin-right{
+    background:#102012;
+    color:white;
+}
+.margin-right:hover{
+    margin-right:20px;
+}
+.block .aa{
+    width:50px;
+    float:right;
+}
+.clear{
+    clear:both;
+}
+.padding-right{
+    text-align:right;
+}
+.padding-right:hover{
+    padding-right:20px;
+    width:180px;
+}
+.block .rongqi{
+    height:300px;
+}
+
+
+.yi,.xx,.yy{
+    width:40px;
+    height:40px;
+    border:1px solid black;
+}
+.xx,.yy{
+    float:left;
+}
+.yi:hover{
+    float:left;
+}
+.aaaa{
+    width:80px;
+    height:80px;
+    background:#ff0122;
+    position:absolute;
+    top:0;
+    right:0;
+}
+.rongqi:hover{
+    position:relative;
+}

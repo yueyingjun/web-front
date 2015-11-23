@@ -1,0 +1,73 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>居中布局</title>
+	<style>
+		body{
+			margin:0;
+			/*body的最小宽度用来解决居中布局
+			当页面缩放后出现的问题*/
+			min-width:800px;
+		}
+		h1,h2,h3,h4,h5,h6{
+			margin:0;
+		}
+
+		.subnav h1{
+			color:white;
+		}
+
+		.header{
+			height:100px;
+			background: black;
+		}
+		.container{
+			width:800px;
+			margin:0 auto;
+
+			border:1px solid red;
+		}
+		.h-content{
+			height:90px;
+		}
+		.subnav{
+			background: blue;
+			height:36px;
+		}
+		.s-content{
+			height:30px;
+		}
+		.x{
+			height:300px;
+			margin-top:20px;
+		}
+		.pro{
+			height:200px;
+			margin-top:20px;
+		}
+		a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	
+	<!-- 1.让标签(div)表达页面
+	  css微调
+	2.页面合理分块(浮动左右布局)
+	3.根据语义选择合适的标签 -->
+	<div class="header">
+		<div class="container h-content">
+		</div>
+	</div>
+	<div class="subnav">
+		<div class="container s-content">
+		</div>
+	</div>
+
+	<div class="container x"></div>
+
+	<div class="container pro">
+	</div>
+</body>
+</html>

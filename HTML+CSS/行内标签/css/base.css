@@ -1,0 +1,46 @@
+body{
+    width:800px;
+    margin:20px auto;
+    padding:100px;
+    border:1px solid black;
+    font-family:"微软雅黑";
+}
+p{
+    font-size:2em;
+}
+font,em,i,strong,b,a,s,span{
+    width:300px;
+    height:300px;
+}
+/*
+      行内标签不能设置宽高
+      行内标签的margin只有左右,没有上下
+*/
+span{
+    /* display:block;/\*这个属性能把行内元素变成块元素*\/ */
+    /* display:inline; */
+    margin:0 20px;
+}
+div{
+    display:inline-block;
+}
+a{
+    padding:0 10px;
+}
+
+
+/*
+行内元素不会独占一行,
+不能设置宽高
+不能设置上下的margin
+a  s  span  ||  em i   strong b
+
+元素的呈现方式
+display:inline;会把任意元素转为行内元素
+display:block;把任意元素转为块元素
+display:inline-block; 转为行内块元素 (除了不独占一行,其他和块一样)
+
+整个页面的大块布局用居中原理 以及浮动合理分块
+局部位置可以适当的使用定位
+文字处理的细节部分能用行内就用行内
+*/

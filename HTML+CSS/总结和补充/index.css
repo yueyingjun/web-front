@@ -1,0 +1,35 @@
+.aa {
+    border: 1px solid black;
+    width: 500px;
+    height: 105px;
+    /* background: blue; */
+}
+
+.bb {
+    /* border: 1px solid red; */
+    width: 10%;
+    height: 80%;
+    /* background-color: palevioletred; */
+    /* border-color: aqua; */
+    /* border-width: 3px; */
+    /* border-style: ridge; */
+    /* border: 3px double #ff0100; */
+    border-bottom: 3px double red;
+    background-image: url("");
+    background: #ff0011 url();
+    /* margin-left: 10%; */
+    /* float: left; */
+    margin-right: 20px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+#bb {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+ul {
+    list-style-type: amharic-abegede;
+    cursor: w-resize;
+}

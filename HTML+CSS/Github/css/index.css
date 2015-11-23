@@ -1,0 +1,160 @@
+body{
+    margin:0;
+    font-family:"微软雅黑";
+    min-width:980px;
+}
+h1,h2,h3,h4,h5,h6,ul,li,p{
+    margin:0;
+    padding:0;
+    /*使用ul和li的时候 去掉默认的小圆点*/
+    list-style:none;
+}
+.section{
+    padding:80px 0;
+    border-bottom:1px solid black;
+}
+.container{
+    width:980px;
+    margin:0 auto;
+}
+.sub-title{
+    font-size:42px;
+    text-align:center;
+    font-weight:normal;
+}
+.sub-info{
+    font-size:18px;
+    color:#767676;
+    text-align:center;
+    margin-top:10px;
+}
+.gh-image{
+    width:100%;
+    margin-top:30px;
+}
+
+
+/*-------------头部开始---------*/
+.header{
+    padding:15px 0;
+    background:#f5f5f5;
+}
+.header-c{
+    height:28px;
+    line-height:28px;
+}
+.logo{
+    float:left;
+    font-size:30px;
+    font-weight:bold;
+    margin-right:10px;
+}
+.search{
+    float:left;
+    border:1px solid #ccc;
+    background:#fff;
+    padding-left:15px;
+    font-size:13px;
+    color:#ccc;
+    border-radius:5px;
+    width:360px;
+    margin-right:15px;
+}
+.functionlist{
+    float:left;
+}
+/*后代选择器*/
+.functionlist li{
+    float:left;
+    padding:0 6px;
+    font-size:13px;
+    font-weight:bold;
+}
+/*群组选择器*/
+.signin , .signup{
+    font-size:13px;
+    padding:6px 12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    float:right;
+    line-height:24px;
+    margin-top:-5px;
+}
+.signin{
+    background-image:linear-gradient(#fcfcfc, #eee);
+    margin-left:10px;
+}
+.signup{
+    color:#fff;
+    background-image:linear-gradient(#8add6d, #60b044);
+}
+
+/*------第一块开始-------*/
+.enterprise{
+    background-image:linear-gradient(#202d5f, #614381);
+}
+/*后代选择器*/
+.enterprise h2{
+    color:#f5f5f5;
+}
+/*TODO:待优化*/
+.btn{
+    text-align:center;
+    color:#f5f5f5;
+    padding:12px 20px;
+    font-size:18px;
+    border-radius:6px;
+}
+.btn-blue{
+    width:346px;
+    margin:12px auto;
+    background-image: linear-gradient(#45b3f3, #1d6ac8)
+}
+.btn-green{
+    width:287px;
+    margin:12px auto;
+    background-image: linear-gradient(#8add6d, #60b044)
+}
+.main{
+    background:#202020 url("../img/octicons-bg.png") center repeat;
+}
+/*TODO:待优化(浮动造成的问题)*/
+.main-c{
+    height:351px;
+}
+
+.signup-form{
+    width:320px;
+    height:351px;
+    float:right;
+}
+.main-intro{
+    width:620px;
+    color:#f5f5f5;
+    float:left;
+}
+.main-intro p{
+    font-size:21px;
+    linear-height:1.5;
+}
+.big-title{
+    font-size:70px;
+    padding-top:10px;
+    margin-bottom:15px;
+    font-weight:normal;
+}
+.love{
+    height:1060px;
+}
+.love-reason{
+    width:480px;
+    height:480px;
+    float:left;
+    text-align:center;
+}
+.l-img{
+    width:100px;
+    height:100px;
+    margin:20px auto 40px;
+    border-radius:50%;
+}
