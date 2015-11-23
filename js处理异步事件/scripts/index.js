@@ -146,12 +146,11 @@ window.onload = function(){
   //3.让div到达你点击的位置时处于半透明状态,隔一段时间透明度才会变成1;
   //4.给你的div设置一个默认速度,让他跑的越远,冻结时间就越长;
   //5.冻结期间是不能再移动的.
-  // 6.试着操作多个
+  //6.试着操作多个
   //事件原理...浏览器监测到某种行为,帮我们自动调用一个写好的函数
   //事件对象...浏览器在调用这个写好的函数时,会向这个函数传递参数,
   //           这个参数是一个对象,里面记录了浏览器监测到的行为的细节.
   //           这个对象被称为事件对象
-
   //           不同的事件,事件对象是有区别的.
   var test = document.getElementById('test');
   test.onmousedown = function(e){
@@ -170,13 +169,117 @@ window.onload = function(){
   document.onmouseup = function(){
     document.onmousemove = null;
   };
-
   //onmousedown  onmouseup  onmousemove
 
-  document.onkeydown = function(e){
-    console.log(e);
-  }
+  // document.onkeydown = function(e){
+  //   console.log(e);
+  // };
 
-  
+
+
+
+  //事件
+  var el = document.getElementById('test');
+  var count = 0;
+  el.onclick = function(){
+    console.log(1);
+    count++;
+  };
+
+  // 鼠标事件
+  // onclick  ondblclick  onmousedown  onmouseup  onmousemove
+  // onmouseover onmouseout
+  // 键盘事件
+  // onkeydown  onkeyup  onkeypress
+  // 表单事件
+  // onblur  onfocus  onchange
+  // 其他事件
+  // onload  onscroll  onerror
+
+  // 事件对象
+  el.onclick = function(e){
+    // console.log(e);
+    // e.altKey
+    // e.shiftKey
+    // e.ctrlKey
+  };
+  // 鼠标事件的事件对象中
+  // e.clientX  e.clientY
+  // e.layerX  e.layerY ->// e.offsetX  e.offsetY
+
+  // 键盘事件中
+  // e.keyCode
+
+
+  // e.target
+  // e.relatedTarget;
+
+  // 事件委托
+  var hei = document.getElementById('test');
+  hei.onclick = function(e){
+    if(e.target == this) {return;}
+    e.target.style.background = 'blue';
+  };
+  var anniu = document.getElementById('anniu');
+  anniu.onclick = function(){
+    var el = document.createElement('div');
+    el.setAttribute('class','xiao');
+    hei.appendChild(el);
+  };
+
+  // 事件冒泡
+  var aa = document.getElementById('aa');
+  var bb = document.getElementById('bb');
+  var cc = document.getElementById('cc');
+  aa.onclick = function(){alert(3);};
+  bb.onclick = function(){alert(2);};
+
+  // 阻止事件冒泡
+  cc.onclick = function(e){
+    alert(1);
+    e.stopPropagation();
+  };
+
+  // document.onclick = function(){alert(4);};
+
+
+
+  //准确的获取一个元素的文档坐标
+  // cc
+  // el.offsetParent  el.offsetTop  el.offsetLeft
+  // var top = cc.offsetTop, left = cc.offsetLeft;
+  // var p = cc.offsetParent;
+  // while( p ){
+  //   top  += p.offsetTop;
+  //   left += p.offsetLeft;
+  //   p = p.offsetParent;
+  // }
+  // console.log(top,left);
+
+
+
+  //事件的默认行为
+  // document.onkeydown = function(e){
+  //   e.preventDefault();
+  //   if(e.keyCode == 38){
+  //     cc.setAttribute('class','aa');
+  //   }
+  // };
+
+
+
+  //事件委托  事件冒泡  事件的默认行为
+
+  //console.dir  consoel.table  $0  $1  console.log('%11','css');
+
+  //准确的文档坐标
+
+  // onkeydown onkeyup
+
+  var tx  = document.getElementById('textarea');
+  tx.onkeypress = function(){
+    console.log(1);
+  };
+  //onkeypress 非打印字符不会触发onkeypress
 
 };
