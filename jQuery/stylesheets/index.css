@@ -1,0 +1,18 @@
+.block{
+	width:100px;
+	height:100px;
+	float:left;
+	margin:10px;
+	border:1px solid black;
+	box-shadow: 0 0 8px black;
+}
+.red{
+	background: #cf3922;
+	opacity:0.7;
+}
+.blue{
+	background: #0382a6;
+}
+.green{
+	background: #39a972;
+}
