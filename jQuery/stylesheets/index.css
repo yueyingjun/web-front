@@ -1,11 +1,26 @@
 .block{
-	width:100px;
-	height:100px;
-	float:left;
-	margin:10px;
+	width:800px;
+	height:200px;
+	margin:10px auto;
 	border:1px solid black;
 	box-shadow: 0 0 8px black;
 }
+.block span{
+    display:block;
+    float:left;
+    border:1px solid black;
+}
+.block div{
+    float:right;
+    border:1px solid black;
+}
+.block div .test{
+    width:50px;
+    height:50px;
+    border:1px solid black;
+    margin:3px;
+}
+
 .red{
 	background: #cf3922;
 	opacity:0.7;
@@ -15,4 +30,7 @@
 }
 .green{
 	background: #39a972;
+}
+.orange{
+	background: #f9a972;
 }
