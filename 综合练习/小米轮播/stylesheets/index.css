@@ -23,17 +23,24 @@ body{
 }
 #J_homeSlider{
     width:auto;
+    height:460px;
     position:relative;
 }
+#w{
+    width:1226px;
+    height:460px;
+    position:relative;
+}
+
 .slide{
-    position: absolute;
-    width: 1226px;
-    z-index: 0;
-    display: none;
+    position:absolute;
+    left:1226px;
+    top:0;
 }
 .show{
-    display:block;
+    left:0;
 }
+
 .ui-pager{
     bottom: 20px;
     color: rgb(102, 102, 102);

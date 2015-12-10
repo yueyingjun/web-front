@@ -10,6 +10,7 @@ $(function(){
   $('.z-item').each(function(i){
     $(this).data('index',i);
   });
+
   $('.z-item').hover(function(){
     $('.hide').stop();
     $(this).find('.hid').show(0,function(){
@@ -84,7 +85,6 @@ $(function(){
   $('.zhishi-item').each(function(i){
     $(this).data('index',i)
   });
-
   $('.zhishi-item').hover(function(){
     clearInterval(timerId);
     $('.zhishi-item').removeClass('red');
@@ -127,56 +127,8 @@ $(function(){
     );
   });
 
+
+  //
 });
-
-// // $( '#id' );
-// // $( $('.aa')[0] );
-// // $( '<span>1</span>' )
-// // $( function(){} )
-
-// $(function(){
-//   $ ( $('.h-item')[0] ).hover(function(){
-//     $(this).animate({height:200,width:300});
-//   },function(){
-//     $(this).animate({height:80,width:80});
-//   })
-//   $({aa:1,bb:2}).animate({aa:800,bb:800},{
-//     duration:700,
-//     step:function(){
-//       console.log(this.aa,this.bb);
-//     }
-//   })
-//   mozilla developer network  MDN
-//   $('.aa').addClass(function(i){
-//     return  i;
-//   });
-
-// // each   data
-// // animate
-// // var fs = $('.f-f');
-// // var fl = $('.floor');
-// // fs.each( function(i,el){
-//   $(this).data('index',i);
-// } );
-// fs.click( function(e){
-//   var i = $(this).data('index');
-//   var top = $( fl[i] ).offset().top - 50;
-//   $({ t:$(window).scrollTop() }).animate( {t:top},{
-//     duration:700,
-//     step:function(){
-// 	$(window).scrollTop(this.t);
-//     }
-//   })
-// });
-
-// var fs = document.getElementsByClassName('f-f');
-// var floors = document.getElementsByClassName('floor');
-// for ( var i = 0;  i < fs.length;  i++){
-//   fs[i].index = i;
-//   fs[i].onclick = function(){
-//     floor[this.index]
-//   }
-// }
-// })
 
 
