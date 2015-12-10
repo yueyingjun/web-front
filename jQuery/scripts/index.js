@@ -71,13 +71,135 @@ window.onload = function(){
   // 	    }); 
   // 	});
   // })
-  $('#addClass').click(function(){
-    var arr = ['red','blue','orange','green'];
-    $('#addClass .test').addClass(function(index){
-      return arr[index];
-    });
-    $('#addClass .test').height(function(index){
-      return 30*index + 10;
-    });
-  });
+  // $('#addClass').click(function(){
+  //   var arr = ['red','blue','orange','green'];
+  //   $('#addClass .test').addClass(function(index){
+  //     return arr[index];
+  //   });
+  //   $('#addClass .test').height(function(index){
+  //     return 30*index + 10;
+  //   });
+  // });
+  // 原生js dom 部分的顺序 
+
+  // 1.选取元素
+  // document.getElementById
+  // document.getElementsByClassName
+  // document.getElemetsByTagName
+  // document.getElementsByName
+  // <input type="text" name='a' value='12'/>
+  // document.querySelector
+  // document.querySelectorAll
+
+  // 2.创建元素
+  // document.createElement
+  // p.appendChild(el)
+  // p.insertBefore(el,anotherchild)
+  // p.removeChild(el)
+
+  // 3.根据逻辑关系再次寻找元素
+  // el.parentElement  el.parentNode
+  // el.children       el.childNodes
+  // el.nextElementSibling       el.nextSibling
+  // el.previousElementSibling   el.previousSibling
+  // el.firstElementChild        el.firstChild
+  // el.lastElementChild         el.lastChild
+
+  // 4.对元素属性的操作
+  // el.getAttribute() 
+  // el.className
+  // el.id
+  // el.setAttribute() 
+  // el.removeAttribute() 
+  // el.hasAttribute() 
+
+  // 元素性质
+  // el.nodeType
+  // el.nodeName
+  // el.nodeValue
+
+  // 5.对样式的操作
+  // el.style.xxxx 
+
+  // 6.其他操作
+  // el.innerHTML
+  // getComputedStyle(el)   el.currentStyle
+
+  // offsetWidth   offsetHeight 
+  // offsetTop     offsetLeft
+  // offsetParent
+  // getBoundingClientRect();
+
+
+
+  // 7.事件
+  // click dblclick mousedown  mouseup
+  // mouseover mouseout  mouseenter mouseleave
+  // mousemove mousewheel
+  // keyup  keydown  keypress(可打印字符)
+  // blur  focus  change
+  // 事件对象
+  // e.layerX    e.offsetX
+  // e.layerY    e.offsetY
+  // e.clientX   e.clientY
+  // e.keyCode
+  // e.shiftKey  e.altKey e.ctrlKey
+  // e.target  || e.srcElement
+  // e.stopPropagation() 调整html结构来阻止冒泡
+  // e.preventDefault()  默认行为
+  // onmousedown(e){e.preventDefault()}阻止双击选中文字的默认行为
+  // return false; 一般用来阻挡a标签跳转
+
+  // 浏览器的 events-loop 行为 (代码的执行顺序)
+  // console.log(1);
+  // setTimeout(function(){
+  //   console.log(2);
+  // },0);
+  // console.log(3);
+
+  //8.Date && RegExp &&　ajax
+  // var d = new Date();
+  // getFullYear  getMonth  getDate getDay
+  // getHours     getMinutes  getSeconds  getMilliseconds
+  // getTime
+  // var d = new RegExp();
+  // var req = new XMLHttpRequest();
+  // req.open('get','http://localhost/aa');
+  // req.send();
+  // req.onreadystateChange
+  // req.response
+  // req.readyState
+  // req.status
+  // req.DONE
+  //浏览器不允许ajax跨域;
+
+  //=======================
+  //选取元素  创建元素  筛选元素
+  //属性  样式  位置  事件
+  //事件对象  ajax
+
+  //jQuery
+
+
+
+  // 选择器  筛选  ( 选取 )
+  // 属性 css  文档处理  事件  事件对象  (对DOM的增删改查)
+  // <s>核心</s>  工具 (封装了一些方便进行逻辑操作的函数)
+
+
+  // 延迟对象 回调函数.................... 
+
+
+  // 1.天猫页面
+  // 2.文档中剩余的部分
+  // 3.整站环境的搭建  ( XAMPP phpcmsv9 )
+
+
+
+
+  //1.typeof NaN
+  //2.var o = {a:1,b:2}    o.a instaceof o
+  //3.var o = {a:1,b:2}    o.b in a
+  //4.var f = function(){} f.prototype.mybind 实现
+  //5.
 };
