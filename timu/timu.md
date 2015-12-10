@@ -8,10 +8,10 @@ var fn = function(){
 console.log(d);
 ```
 1.以上代码的运行结果:______
- A:2
- B:undefined
- C:null
- D:报错
+ <br>A:2
+ <br>B:undefined
+ <br>C:null
+ <br>D:报错
 
 ```
 var name = 'zhangsan';
@@ -28,10 +28,10 @@ var fn = (function(name){
 fn();
 ```
 2.以上代码的运行结果:______
- A:'hello lisi'
- B:'hello zhangsan'
- C:'hello undefined'
- D: 报错
+ <br>A:'hello lisi'
+ <br>B:'hello zhangsan'
+ <br>C:'hello undefined'
+ <br>D: 报错
 
 ```
 var o = {
@@ -46,10 +46,10 @@ var o = {
 o.fn.apply({a:1,b:2,d:3});
 ```
 3.以上代码的运行结果:______
- A: 3  {a:1,b:2,d:3}
- B: 7  {d:7,fn:function}
- C: 3  {d:7,fn:function}
- D: 报错
+ <br>A: 3  {a:1,b:2,d:3}
+ <br>B: 7  {d:7,fn:function}
+ <br>C: 3  {d:7,fn:function}
+ <br>D: 报错
 
 
 
@@ -61,10 +61,10 @@ setTimeout(function(){
 console.log(3);
 ```
 4.以上代码在chrome中的的运行结果:______
- A: 1 3 2
- B: 1 2 3
- C: 1 3
- D: 以上都不是
+ <br>A: 1 3 2
+ <br>B: 1 2 3
+ <br>C: 1 3
+ <br>D: 以上都不是
 
 
 ```
@@ -81,10 +81,10 @@ for ( var i = 0;  i < 10;  i++){
 }
 ```
 5.以上代码在chrome中的的输出结果:______
- A: 3次 '-' 7次 false
- B: 报错
- C: 10 次 undefined
- D: 以上都不是
+ <br>A: 3次 '-' 7次 false
+ <br>B: 报错
+ <br>C: 10 次 undefined
+ <br>D: 以上都不是
 
 
 ####填空
