@@ -162,10 +162,10 @@ window.onload = function(){
   })();
   
   //17
-  '1,2,3,4.5:6"7/'.replace(/([,.:"\/])/g,(function(){
+  '1,2,3,4.5,6"7/'.replace(/([,.:"\/])/g,(function(){
     var dict = {',':'-','.':'--','"':'---','/':'----'};
     return function(r){
-      return dict[ r[1] ];
+      return dict[ r ];
     }
   })())
   
