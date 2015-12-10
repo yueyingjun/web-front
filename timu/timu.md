@@ -7,11 +7,11 @@ var fn = function(){
 }
 console.log(d);
 ```
-以上代码的运行结果:______
-- A:2
-- B:undefined
-- C:null
-- D:报错
+1.以上代码的运行结果:______
+ A:2
+ B:undefined
+ C:null
+ D:报错
 
 ```
 var name = 'zhangsan';
@@ -27,11 +27,11 @@ var fn = (function(name){
 })(name);
 fn();
 ```
-以上代码的运行结果:______
-- A:'hello lisi'
-- B:'hello zhangsan'
-- C:'hello undefined'
-- D: 报错
+2.以上代码的运行结果:______
+ A:'hello lisi'
+ B:'hello zhangsan'
+ C:'hello undefined'
+ D: 报错
 
 ```
 var o = {
@@ -45,11 +45,11 @@ var o = {
 }
 o.fn.apply({a:1,b:2,d:3});
 ```
-以上代码的运行结果:______
-- A: 3  {a:1,b:2,d:3}
-- B: 7  {d:7,fn:function}
-- C: 3  {d:7,fn:function}
-- D: 报错
+3.以上代码的运行结果:______
+ A: 3  {a:1,b:2,d:3}
+ B: 7  {d:7,fn:function}
+ C: 3  {d:7,fn:function}
+ D: 报错
 
 
 
@@ -60,11 +60,11 @@ setTimeout(function(){
 },0)
 console.log(3);
 ```
-以上代码在chrome中的的运行结果:______
-- A: 1 3 2
-- B: 1 2 3
-- C: 1 3
-- D: 以上都不是
+4.以上代码在chrome中的的运行结果:______
+ A: 1 3 2
+ B: 1 2 3
+ C: 1 3
+ D: 以上都不是
 
 
 ```
@@ -80,11 +80,11 @@ for ( var i = 0;  i < 10;  i++){
   console.log( fn() );
 }
 ```
-以上代码在chrome中的的输出结果:______
-- A: 3次 '-' 7次 false
-- B: 报错
-- C: 10 次 undefined
-- D: 以上都不是
+5.以上代码在chrome中的的输出结果:______
+ A: 3次 '-' 7次 false
+ B: 报错
+ C: 10 次 undefined
+ D: 以上都不是
 
 
 ####填空
@@ -105,9 +105,9 @@ var generatePoker = function(){
 };
 console.table( generatePoker() );
 ```
-你认为以上函数是用来做什么的_____
-它能完成工作吗____
-如果有错误，错误在哪里____
+6.你认为以上函数是用来做什么的_____________
+它能完成工作吗_____________
+如果有错误，错误在哪里__________________
 
 
 ```
@@ -116,7 +116,7 @@ console.log( a == b );
 a = b = c = {};
 console.log( a == b );
 ```
-以上代码的输出结果____,_____
+7.以上代码的输出结果____,_____
 
 
 ```
@@ -137,14 +137,14 @@ console.log( no.hasOwnProperty('e') );
 console.log( no.hasOwnProperty('c') );
 console.log( no.hasOwnProperty('b') );
 ```
-以上代码的输出结果____,_____,______
+8.以上代码的输出结果____,_____,______
 
 ```
 var c = [1,2,3,4,5];
 c.length = 2;
 console.log(c);
 ```
-以上代码的输出结果_________
+9.以上代码的输出结果_________
 
 
 ```
@@ -152,8 +152,7 @@ var fn = function(value){
   return Object.prototype.toString.apply(value) === '[object Array]';
 }
 ```
-简述以上代码可以用来做什么
-_________________________________
+10.简述以上代码可以用来做什么____________________________________
 
 ```
 Array.prototype.f = function(f,value){
@@ -168,7 +167,7 @@ var a = function(x,y){
 }
 console.log(  [1,3,4,7,9].f(a,0)  );
 ```
-以上代码的输出结果为:___________
+11.以上代码的输出结果为:___________
 
 
 ```
@@ -176,14 +175,14 @@ var a = /\d+/g;
 var b = /\d+/g;
 console.log(a == b);
 ```
-以上代码的输出结果为:__________
+12.以上代码的输出结果为:__________
 
 ```
 var d = 'root'
 var c = new RegExp('\\b' + d + '\\b');
 console.log( c.test('aa bb cc root dd') );
 ```
-以上代码的输出结果为:_________
+13.以上代码的输出结果为:_________
 
 
 
@@ -193,7 +192,7 @@ var els = document.getElementsByClassName('cl');
 els[0].parentElement.removeChild( els[els.length-1] );
 console.log(els.length);
 ```
-以上代码的输出结果_________
+14.以上代码的输出结果_________
 
 
 ```
@@ -204,14 +203,14 @@ console.log(els.length);
   }
 })())
 ```
-以上代码的运行结果________________
+15.以上代码的运行结果________________
 
 
 ```
 var date = new Date(2015,2,32);
 console.log( date.getDate() );
 ```
-以上代码的运行结果________________
+16.以上代码的运行结果________________
 
 
 ```
@@ -221,14 +220,14 @@ for(var i = 0; 10; i++){
   alert( t [ i % t.length ] );
 }
 ```
-请用文字描述以上代码的运行效果______________
+17.请用文字描述以上代码的运行效果______________
 
 ```
 for( var i in Array.prototype ){
   console.log(i);
 }
 ```
-以上代码的运行结果_________
+18.以上代码的运行结果________________
 为什么______________________________
 
 
@@ -238,7 +237,7 @@ var o = {a:1};
 console.log( o.b.c );
 console.log( o.b && o.b.c )
 ```
-以上代码的运行结果________
+19.以上代码的运行结果________
 
 
 ```
@@ -247,7 +246,7 @@ var num = (function(n){
   return n * arguments.callee(n-1)
 })(4);
 ```
-以上代码的运行结果________
+20.以上代码的运行结果________
 
 
 ```
@@ -259,7 +258,7 @@ setInterval(function(){
   console.log(1);
 },10)
 ```
-以上两段代码有什么不同_________________________
+21.以上两段代码有什么不同_________________________
 
 
 ```
@@ -281,7 +280,7 @@ Array.prototype.y = function(){
 var c = arr.y();
 console.log(c);
 ```
-以上代码的运行结果____________________
+22.以上代码的运行结果____________________
 
 
 ###解答题
@@ -300,7 +299,7 @@ Object.prototype.z = function(){
 }
 var n = o.z();
 ```
-给对象添加一个深拷贝方法;
+23.给对象添加一个深拷贝方法;
 
 
 ```
@@ -315,14 +314,14 @@ el.onclick = (function(){
   }
 })();
 ```
-给一个元素添加点击事件，只有前三次点击执行我们的逻辑代码，要求不引入全局变量
+24.给一个元素添加点击事件，只有前三次点击执行我们的逻辑代码，要求不引入全局变量
 
 ```
 //Array.prototype.splice   Array.prototype.slice
 ```
-请写出这两个方法的用途和参数和返回值
+25.请写出这两个方法的用途和参数和返回值
 
 ```
 //parseInt  Number
 ```
-请写出这两个方法的区别:(一点即可,给出实例)
+26.请写出这两个方法的区别:(一点即可,给出实例)
