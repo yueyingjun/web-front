@@ -1,0 +1,87 @@
+body,div,ul,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,input{margin:0;padding:0; list-style:none; font-weight:normal;}
+b,i,em{text-decoration:none; font-style:normal;}
+
+body{
+  font-family: "Broadway";
+  background:url('../images/bg.JPG') no-repeat center center;
+  background-size: cover;
+}
+
+.wrapper{
+  width:793px;
+  margin:0 auto;
+  background:#6f5649;
+  padding:40px;
+  border-radius:1%/50%;
+  box-shadow:0 0px 50px #ccc;
+  -webkit-transition:all .8s ease;
+}
+.saolei{
+  overflow:hidden;
+  margin:0 auto;
+  background:white;
+  border:10px solid white;
+  border-radius:1%/50%;
+  box-shadow:1px 1px 3px black inset,-1px -1px 3px black inset,1px 1px 4px black;
+  position:relative;
+}
+
+.block{
+  font-size:0.8em;
+  width:55px;
+  height:55px;
+  line-height: 55px;
+  text-align:center;
+  float:left;
+  margin:15px 0 0 15px; 
+  color:white;
+  border-radius:1%/50%;
+  box-shadow:0 0 1px white inset;
+  -webkit-transition:all 1.2s ease;
+  cursor:pointer;
+}
+
+.dingwei{
+  width:150px;
+  height:150px;
+  background-color: #e07e7f;
+  opacity:0.6;
+  text-align: center;
+  line-height: 150px;
+  border-radius: 50%;
+  color:white;
+  font-size:3em;
+  position: absolute;
+  left:40px;
+  top:80px;
+}
+.tips{
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:100;
+  color:white;
+  display:none;
+  -webkit-transition:all .8s ease;
+}
+.tips p{
+  display:none;
+  color:white;
+  position:absolute;
+  line-height:normal;
+  z-index:10000;
+  text-align:center;
+  border:1px solid #999;
+  border-radius: 5px;
+  font-size:0.3em;
+  letter-spacing:4px;
+  padding:10px 20px;
+  position: absolute;
+  z-index:30;
+  top:70%;
+  left:50%;
+  margin-left:-76px;
+  cursor:pointer;
+}
