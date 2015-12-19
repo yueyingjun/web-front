@@ -1,0 +1,120 @@
+body,div,ul,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,input{margin:0;padding:0; list-style:none; font-weight:normal;}
+b,i,em{text-decoration:none; font-style:normal;}
+.bg{
+  width:600px;
+  background-image:url(bg.jpg);
+  background-repeat:repeat-y;
+  margin:40 auto;
+  padding-left:60px;
+  padding-top:40px;
+  padding-bottom:80px;
+  position:relative;
+}
+.bg .content{
+  width:470px;
+  /* height:200px; */
+  background-color:white;
+  border-radius:5px;
+  padding-top:50px;
+  padding-left:30px;
+  box-shadow:2px 2px 8px black;
+}
+
+.content:after{
+  position:absolute;
+  top:65px;
+  left:89px;
+  content:'来，说说你在想什么';
+  font-size:0.8em;
+  color:#999;
+}
+
+.bg .content .input{
+  width:400px;
+  height:80px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  position:relative;
+}
+
+.bg .content textarea{
+  width:397px;
+  height:64px;
+  border:none;
+  resize:none;
+  border-radius:5px;
+  outline:none;
+}
+
+.tips{
+  position:absolute;
+  right:15px;
+  bottom:2px;
+  font-size:0.6em;
+  color:#ccc;
+}
+
+.tips em{
+  color:black;
+  margin:0px 5px;
+  font-weight:bold;
+}
+.fabu{
+  width:50px;
+  height:20px;
+  line-height:20px;
+  text-align:center;
+  border-radius:4px;
+  font-size:0.8em;
+  margin-left:350px;
+  margin-top:10px;
+  margin-bottom:20px;
+  background-color:#5f8ef3;
+  color:white;
+}
+
+.hr{
+  border-top:1px solid #ccc;
+}
+.w{
+  
+}
+.item{
+  padding:20px;
+  font-size:0.7em;
+  color:#999;
+}
+.img-bao{
+  position:relative;
+}
+.hover {
+  position:absolute;
+  width:20px;
+  height:20px;
+  opacity:0.5;
+  background:black;
+  top:20px;
+  left:20px;
+}
+
+.item img{
+  width:200px;
+ 
+}
+
+.yulan{
+  position:fixed;
+  width:200px;
+  height:200px;
+  border-radius:5px;
+  border:1px solid #ccc;
+  top:40px;
+  right:20px;
+  display:none;
+  overflow:hidden;
+}
+
+.yulan img{
+  position:absolute;
+
+}
