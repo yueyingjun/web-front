@@ -1,0 +1,180 @@
+.content{
+          /* background-color:#fff; */
+          height:785px;
+          width:1000px;
+          margin:0 auto;
+          position:relative;
+          margin-top:10px;
+          }
+
+.app-links{
+            width:1000px;
+            
+            margin:0 auto;
+            }
+.ff{
+    font-size:20px;
+    color:white;
+    width:150px;
+    text-align:center;
+    height:278px;
+    position:absolute;
+    left:50%;
+    margin-top:90px;
+    margin-left:-70px;
+    z-index:999;
+
+}
+
+.zz{
+    font-size:20px;
+    color:white;
+    width:150px;
+    text-align:center;
+    height:278px;
+    position:absolute;
+    left:50%;
+    margin-top:190px;
+    margin-left:-70px;
+    z-index:999;
+
+}
+
+.i-image-1{
+
+            width:560px;height:280px;
+            position:absolute;
+            left:50%;
+            margin-left:-280px;
+            z-index:9;
+            top:-10;
+            }
+
+
+.i-image-2{
+overflow:hidden;
+
+
+            width:500px;height:500px;
+            position:absolute;
+            left:50%;
+            top:20px;
+            margin-left:-500px;
+            z-index:10;
+            }
+.i-image-3{
+overflow:hidden;
+
+
+            width:500px;height:500px;
+            position:absolute;
+            left:50%;
+            top:20px;
+            z-index:10;
+            }
+
+.i-image-4{
+overflow:hidden;
+            width:300px;height:300px;
+            position:absolute;
+            left:50%;
+            margin-left:-450px;
+            top:270px;
+            z-index:30;
+            }
+
+.i-image-5{
+overflow:hidden;
+
+
+            /* border:1px solid red; */
+            width:300px;height:300px;
+            position:absolute;
+            left:50%;
+            margin-left:-150px;
+            top:270px;
+            z-index:30;
+            }
+
+.i-image-6{
+overflow:hidden;
+
+
+            width:300px;height:300px;
+            position:absolute;
+            left:50%;
+            margin-left:150px;
+            top:270px;
+            z-index:30;
+            }
+
+.i-image-7{
+overflow:hidden;
+
+
+            width:300px;height:300px;
+            position:absolute;
+            left:50%;
+            margin-left:-300px;
+            top:421px;
+            z-index:10;
+            }
+
+.i-image-8{
+overflow:hidden;
+
+
+            width:300px;height:300px;
+            position:absolute;
+            left:50%;
+            top:421px;
+            z-index:10;
+            }
+
+.i-image-1 img{
+                position:absolute;
+            }
+
+
+.im{
+     background-color:rgb(236,235,233);
+     width:235px;height:235px;
+     position:relative;
+     }
+
+.im-hover{
+     width:235px;height:235px;
+     background-image:url('../image/biankuang.png');
+     background-position:center;
+     }
+.item{
+       margin-left:70px;
+       }
+.item p{
+         margin-top:30px;
+         margin-bottom:34px;
+         text-align:center;
+         color:rgb(64,64,64);
+         font-size:16px;
+         }
+.item img{
+           position:absolute;
+           top:50%;
+           margin-top:-25px;
+           left:50%;
+           margin-left:-20px;
+           }
+
+.ewm{
+           position:absolute;
+           top:50%;
+           margin-top:-70px;
+           left:50%;
+           margin-left:-70px;
+          }
+.play{
+  top:50%;
+  margin-top:-82px;
+  left:50%;
+  margin-left:-28px;
+}

@@ -1,0 +1,118 @@
+body,p,hr{
+           font-family:"微软雅黑";
+           background-color:rgb(227,227,227);
+           margin:0;padding:0;
+           }
+
+.header{
+
+         height:102px;
+         background-color:rgb(0,154,170);
+
+         }
+
+.header-content{
+
+                 margin:0 auto;
+                 width:1000px;
+                 position:relative;
+                 height:102px;
+                 }
+.header-content img{
+                     margin-top:15px;
+                     }
+
+.nav-item{
+
+           position:absolute;
+           bottom:18px;
+           right:10px;
+           }
+
+.nav-item img{
+  margin:0;
+}
+
+
+.nav-item a{
+             display:block;
+             float:left;
+             /* border:1px solid red; */
+             margin-left:44px;
+             text-decoration:none;
+             color:white;
+             }
+
+.nav-item a:hover{
+             /* background-color:red; */
+                   }
+
+
+.nav-hover{
+           position:absolute;
+           bottom:-7px;
+           }
+
+
+.footer{
+         /* background-color:red; */
+         height:238px;
+         }
+
+.hr{
+     height:1px;
+     background-image:url('../image/hr.png');
+    /* height:1px;border:none;border-top:1px solid rgb(142,142,142); */
+    width:1000px;
+    margin:0 auto;
+    }
+
+.hide{
+       display:none;
+       }
+
+
+.links{
+        margin:0 auto;
+        /* background-color:red; */
+        font-size:15px;
+        margin-top:30px;
+        margin-bottom:15px;
+        color:rgb(116,131,135);
+        text-align:center;
+        width:500px;
+        }
+
+.links a{
+          display:block;
+          float:left;
+          text-decoration:none;
+          color:rgb(116,131,135);
+          }
+
+.links img{
+            display:block;
+            float:left;
+            margin-right:25px;
+            margin-left:25px;
+            }
+
+.copyright{
+            margin-top:30px;
+            font-size:14px;
+            color:rgb(116,131,135);
+            text-align:center;
+            line-height:30px;
+            margin-bottom:25px;
+            min-width:1000px;
+            }
+.clear{
+        clear:both;
+        }
+.right{
+        float:right;
+        }
+
+.left{
+       float:left;
+       }

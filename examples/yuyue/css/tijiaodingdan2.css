@@ -1,0 +1,117 @@
+.content{
+          /* background:url(../image/dingdanbg.png) no-repeat; */
+          
+          /* background-color:white; */
+          }
+.s{
+    padding-top:40px;
+    margin:0 auto; 
+    width:1000px;
+    padding-bottom:30px;
+    }
+.content p{
+            margin-left:140px;
+            line-height:22px;
+            }
+.p-d{
+      width:130px;
+      color:#999;
+      margin-bottom:33px;
+      }
+.input{
+        background-color:rgb(227,227,227);
+        border-radius:4px;
+        width:210px;
+        height:23px;
+        margin-left:30px;
+        margin-top:20px;
+        border:1px solid rgb(163,163,163);
+        outline:none;
+        }
+.input-last{
+        background-color:rgb(227,227,227);
+        border-radius:4px;
+        width:370px;
+        height:23px;
+        margin-left:120px;
+        margin-top:20px;
+        border:1px solid rgb(163,163,163);
+        outline:none;
+
+             }
+.tijiaohr{
+            height:1px;border:none;border-top:1px solid rgb(142,142,142);
+            width:140px;
+            margin-left:140px;
+           margin-top:3px;
+           margin-bottom:8px;
+           }
+.s-bottom{
+           /* border:1px solid red; */
+           margin-top:50px;
+           margin-right:40px;
+           }
+
+.status-hr{
+            height:1px;border:none;border-top:1px solid rgb(142,142,142);
+            width:700px;
+            margin:0 auto;
+            }
+.s1{
+     margin-left:140px;
+     }
+.s-container{
+              margin-top:-18px;
+              vertical-align:center;
+              }
+.s-unactive{
+             height:20px;
+             width:20px;
+             border-radius:50%;
+             background-color:#999;
+             margin-top:6px; 
+             }
+.s-active{
+           height:24px;
+           width:24px;
+           border-radius:50%;
+           border:4px solid rgb(231,84,131); 
+           background-color:#999;
+           }
+.s2{
+     margin-right:324px;
+     margin-left:324px;
+
+     }
+.t2{
+     margin:0 300 0 243;
+     }
+
+.t-active{
+           color:black;
+           }
+
+.s-description{
+                /* border:1px solid red; */
+                margin:30 0 0 130;
+                }
+
+.about{
+        width:1000px;
+        height:180px;
+        margin:0 auto;
+        }
+
+.about dl{
+           margin-top:30px;
+           font-size:12px; 
+           float:left;
+           margin-left:150px;
+           line-height:20px;
+           color:black;
+
+           }
+.about dt{
+           font-size:18px; 
+           margin-bottom:20px;
+           }
