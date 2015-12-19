@@ -1,0 +1,397 @@
+body,div,ul,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,input{margin:0;padding:0; list-style:none; font-weight:normal;}
+b,i,em{text-decoration:none; font-style:normal;}
+a{
+  text-decoration:none;
+  -webkit-transition:all .3s ease;
+}
+body{
+  font-family:Arial,'Microsoft Yahei',STHeiti;
+}
+
+.wrapper{
+  min-width:1140px;
+}
+
+/*头部*/
+.layout-header{
+  width:100%;
+  position:relative;
+}
+
+.header-top-wrapper{
+  width:100%;
+  height:100px;
+  background:url('../images/top-pumel-bg.jpg');
+}
+.header-container{
+  width:1120px;
+  margin:0 auto;
+  font-size:12px;
+}
+.logo{
+  float:left;
+  display:block;
+  width:161px;
+  height:38px;
+  padding:31px 0 0;
+}
+
+.nav-list{
+  float:right;
+  padding-top:36px;
+  line-height:25px;
+}
+
+.nav-list ul{
+  float:left;
+}
+.nav-list li{
+  float:left;
+}
+.nav-list ul a{
+  padding:0 15px;
+}
+.nav-list a{
+  display:block;
+  font-size:14px;
+  opacity:.8;
+  color:#fff;
+  height:26px;
+}
+.nav-list ul a:hover{
+  opacity:1; 
+}
+
+.seleted a{
+  opacity:1; 
+  font-weight:bold;
+}
+
+.nav-list .buy-col{
+  float:left;
+  padding-left:21px;
+  margin-left:14px;
+  background-image:url('../images/buy-col-left-bg.png');
+  background-repeat:no-repeat;
+  background-position:left;
+}
+.nav-list .buy-col a{
+  float:left;
+  padding:0 15px;
+  border:1px solid #414345;
+  border-radius:6px;
+  opacity:1;
+}
+.nav-list .buy-col a:hover{
+  border:1px solid white;
+}
+
+.nav-list .buy-button{
+  margin-left:20px;
+  background: #6B89D5;
+  border: 1px solid #6B89D5;
+}
+.nav-list .buy-button:hover{
+  background:white;
+  color:black;
+}
+
+
+.fn-clear::after{
+  display:block;
+  clear:both;
+  height:0;
+  visibility:hidden;
+  content:" ";
+  font-size:0;
+}
+
+.layout-content{
+  width:100%;
+  height:38px;
+  line-height:38px;
+  background-image:url('../images/global-gray-bg.jpg');
+}
+.brand{
+  float:left;
+}
+.content-right{
+  float:right;
+  position:relative;
+}
+.content-right span{
+  cursor:pointer;
+  padding:0 12px;
+  -webkit-transition:.3s ease;
+}
+.content-right span:hover{
+  color:#6B89D5;
+}
+
+
+.line-link{
+  background:url('../images/loginpanel-left-line.png') no-repeat left;
+}
+
+.cart{
+  display:inline-block;
+  width:97px;
+  text-align:center;
+  color:black;
+  background:url('../images/btn-icon.png') -6px -456px no-repeat;
+}
+.cart:hover{
+  color:#6B89D5;
+}
+.content-right b{
+  position:absolute;
+  display:inline-block;
+  background:#8CA8ED;
+  border-radius:4px;
+  height:18px;
+  line-height:18px;
+  padding:0 6px;
+  color:white;
+  font-weight:normal;
+  right:0;
+  top:10px;
+}
+
+
+.main-container{
+  background:#f1f1f1 url('../images/con-bg.jpg') repeat-x top;
+  min-height:400px;
+}
+
+.main-container .content{
+  width:1120px;
+  clear:both;
+  margin:0 auto;  
+  padding:20px 0 25px;
+}
+
+.gray-box{
+  border-radius:8px;
+  box-shadow: rgba(0,0,0,.27) 0 1px 3px, #DCDCDC 0 1px 0, #DDD 0 -1px 0;
+  overflow:hidden;
+}
+
+.phone-ad{
+  height:450px;
+  margin:20px 0;
+}
+.phone-ad a{
+  display:block;
+  overflow:hidden;
+}
+.phone-ad .phone1{
+  float:left;
+}
+.phone-ad .phone2{
+  border-left:1px solid #efefef;
+  float:left;
+}
+
+
+
+.banner{
+  height:150px;
+  margin:20px 0;
+}
+.phone-ad img, .banner img{
+  -webkit-transition:1s ease;
+}
+.phone-ad img:hover, .banner img:hover{
+  -webkit-transform:scale(1.1,1.1);
+}
+
+
+.product-show .item{
+  float:left;
+  background:white;
+  border:1px solid #efefef;
+  margin-left:-1px;
+  margin-top:-1px;
+  position:relative;
+}
+.product-show .r-s{
+  float:right;
+  width:374px;
+  height:649px;
+  border-right:none;
+}
+.product-show .l-s{
+  height:649px;
+  border-bottom:none;
+}
+.product-show .l-last{
+  width:747px;
+  background:white;
+  border-right:none;
+}
+
+.product-show img{
+  margin:5px;
+}
+.product-show .item-info{
+  position:absolute;
+  bottom:14px;
+  left:22px;
+  z-index:3;
+} 
+
+
+.product-show h3{
+  color: #616161;
+  font-size: 18px;
+}
+.product-show h2{
+  color: #333;
+  font-size: 16px;
+}
+
+.product-show .cover{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+}
+
+.product-show .cover:hover{
+  box-shadow: 0 0 38px rgba(0,0,0,.08) inset;
+  transition: all .15s ease;
+}
+
+
+
+.shopping-info{
+  margin:20px 0 0;
+  text-align:center;
+  Background:white;
+}
+
+.shopping-info li{
+  float: left;
+  width: 280px;
+  height: 150px;
+}
+.shopping-info li h5 {
+    color: #000;
+    font-size: 15px;
+    line-height: 25px
+}
+
+.shopping-info li h6 {
+    color: #A8A8A8;
+    font-size: 12px;
+    line-height: 24px
+}
+.shopping-info span{
+  margin: 33px auto 5px;
+  display: block;
+  width: 32px;
+  height: 36px;
+  /* background: url(../img/shopping-info.png) no-repeat top left; */
+  transition: all .15s ease;
+  moz-transition: all .15s ease;
+  webkit-transition: all .15s ease;
+  o-transition: all .15s ease;
+  opacity:0.625;
+}
+.shopping-info .online{
+  background:url('../images/shopping-info.png');  
+}                                              
+.shopping-info .return-goods{                  
+  background:url('../images/shopping-info.png') -50px 0;  
+                                               
+}                                              
+.shopping-info .exchange-goods{                
+  background:url('../images/shopping-info.png') -100px 0;  
+                                               
+}                                              
+.shopping-info .delivery-goods{                
+  background:url('../images/shopping-info.png') -150px 0;  
+}
+.online-services .online:hover{
+  opacity:1;
+}
+.footer{
+  width:100%;
+  Background:#FBFBFB;
+  height:224px;
+}
+.service{
+  height:162px;
+}
+.copyright{
+  height:62px;
+  Background:#F1F1F1;
+  color:#434d55;
+  font-size:12px;
+}
+.inner{
+  width:1120px;
+  margin:0 auto;
+}
+.service .info{
+  float:left;
+}
+
+.service ul{
+  width:216px;
+  padding-top:15px;
+  float:left;
+}
+.service ul li{
+  font-size:12px;
+  line-height:12px;
+  padding:6px 0;
+  color:#ccc;
+}
+.service ul li a{
+  color:#434d55;
+}
+.service ul h2{
+  padding:9px 0 13px;
+  font-size:18px;
+  line-height:18px;
+  color:#434d55;
+}
+
+.service .inline{
+  float:right;
+  padding-top:32px;
+  line-height:34px;
+  text-align:right;
+}
+.inline p{
+  font-size:12px;
+}
+.copyright .content{
+  padding-top:16px;
+}
+.copyright span{
+  padding-right:20px;
+}
+.copyright .content a{
+  Background:url('../images/loginpanel-left-line.png') no-repeat left;
+  padding:10px;
+  color:#84a3e3;
+}
+.copyright .content a:hover{
+  color:#4A7ADD;
+}
+.copyright #weixin{
+  display:inline-block;
+  Background:url('../images/sns-icons.png') no-repeat -70px 0;
+  width:24px;
+  height:16px;
+  padding:0px 0px 0px;
+  opacity:0.625;
+}
+.copyright #weixin:hover{
+  opacity:1;
+}
