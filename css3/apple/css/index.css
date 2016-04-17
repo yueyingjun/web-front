@@ -1,0 +1,318 @@
+@font-face {
+    font-family:"Myriad Set Pro";
+    font-style:normal;
+    src:local("Myriad Set Pro"), url("../fonts/myriad-set-pro_thin.woff") format("woff");
+    /* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+article, aside, footer, header, nav, main, section, summary, details, hgroup, figure, figcaption {
+    display: block;
+}
+body{
+    font-family:"Myriad Set Pro","微软雅黑";
+    margin:0;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+ul,li,h1,h2,h3,h4,h5,h6,p{
+    margin:0;
+    padding: 0;
+    font-weight:normal;
+    list-style: none;
+}
+.clearfix:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.apple-header{
+    position:absolute;
+    top:0;
+    left:0;
+    height:44px;
+    z-index:50;
+    width:100%;
+    background: rgba(0,0,0,0.8);
+}
+.apple-header .container{
+    padding:0 20px;
+    margin:0 auto;
+    max-width:1000px;
+}
+.apple-header a{
+    color:white;
+    transition:all .625s ease;
+}
+.apple-header li:hover{
+    opacity:0.5;
+}
+
+.apple-header li{
+    height:44px;
+    display: inline-block;
+}
+.apple-header li a{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+#bigul{
+    text-align: justify;
+    height:2.75em;
+    line-height: 2.75em;
+}
+.apple-header ul:after{
+    content:"";
+    display:inline-block;
+    width:100%;
+    height:0;
+    font-size:0;
+    line-height:0;
+}
+.apple-header span{
+    width:0;
+    height:0;
+    position:absolute;
+    top:0;
+    left:0;
+    overflow:hidden;
+}
+.apple-header .logo{
+    padding:0 3px;
+    width:20px;
+    background: url(../images/logo.svg) no-repeat center center;
+}
+.apple-header .mac{
+    width:1.9375em;
+    background: url(../images/mac.svg);
+}
+.apple-header .ipad{
+    width:1.875em;
+    background: url(../images/ipad.svg);
+}
+.apple-header .iphone{
+    width:3em;
+    background: url(../images/iphone.svg);
+}
+.apple-header .watch{
+    width:2.75em;
+    background: url(../images/watch.svg);
+}
+.apple-header .tv{
+    width:1.25em;
+    background: url(../images/tv.svg);
+}
+.apple-header .music{
+    width:2.5em;
+    background: url(../images/music.svg);
+}
+.apple-header .support{
+    width:3.5625em;
+    background: url(../images/support.svg);
+}
+.apple-header .search{
+    width:20px;
+    background: url(../images/search.svg);
+}
+.apple-header .bag{
+    width:18px;
+    background: url(../images/bag.svg);
+}
+
+
+#smallul{
+    position:relative;
+}
+#smallul .list{
+    width:44px;
+    height:44px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+#smallul .list .line1{
+    position:absolute;
+    width:17px;
+    height:1px;
+    background:white;
+    top:16px;
+    /* -webkit-transform:rotateZ(45deg); */
+}
+#smallul .list .line2{
+    position:absolute;
+    width:17px;
+    height:1px;
+    background:white;
+    top:24px;
+    /* -webkit-transform:rotateZ(-45deg); */
+}
+#smallul .logo{
+    position:absolute;
+    left:50%;
+    margin-left:-10px;
+}
+#smallul .bag{
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+
+
+
+
+article{
+    position:relative;
+    top:0;
+    height:65%;
+    min-height:650px;
+    border-bottom:2px solid #fff;
+}
+
+/* .copyinner{ */
+/*     text-align:center; */
+/*     margin-top:-120px; */
+/* } */
+
+
+
+/* article h1 span{ */
+/*     width:0; */
+/*     height:0; */
+/*     position:absolute; */
+/*     overflow: hidden; */
+/* } */
+/* article h1{ */
+/*     margin:0 auto; */
+/*     width:136px; */
+/*     height:50px; */
+/*     background: url(../images/logo_appletv_medium.png); */
+/* } */
+/* article h2{ */
+/*     font-size:42px; */
+/*     line-height: 1.419; */
+/*     font-weight: 200; */
+/* } */
+/* article .hero-image-inner{ */
+/*     width:865px; */
+/*     height:466px; */
+/*     background: url(../images/home_hero_apple_tv_evergreen_medium.jpg) no-repeat center center; */
+/*     margin:0 auto; */
+/* } */
+
+.promo li{
+    width:25%;
+    height:200px;
+    float:left;
+    border-bottom:2px solid #fff;
+}
+.promo li a{
+    display:block;
+    height:100%;
+    font:0/0 a;
+    border-right:2px solid #fff;
+    background-size:cover;
+    background-position:center center;
+}
+
+.promo-watch{
+    background:url('../images/promo_holiday_watch_large.jpg')
+}
+.promo-ios-preview{
+    background:url('../images/promo_ios93preview_large.jpg')
+}
+.promo-macbook{
+    background:url('../images/promo_macbook_large.jpg')
+}
+.promo-iphone6s{
+    background:url('../images/promo_startsomethingnew_iphone6s_large.jpg')
+}
+#smallul{
+    display:none;
+}
+
+.globalfooter{
+    font-size:12px;
+    line-height:1.66;
+    background-color:#f2f2f2;
+    color:#666;
+    height:500px;
+}
+.x{
+    padding-top:10px;
+}
+
+.globalfooter .gf-content{
+    margin:0 auto;
+    max-width:980px;
+    padding:0 22px;
+}
+.globalfooter  .gf-content nav{
+    padding-top:20px;
+}
+.globalfooter .gf-content .col{
+    width:20%;
+    float:left;
+}
+.globalfooter .col-section a:hover{
+    text-decoration:underline;
+}
+
+
+
+
+@media (max-width:1068px){
+    .promo li{
+	width:50%;
+    }
+}
+@media (max-width:735px){
+    .globalfooter .gf-content{
+	margin:0 auto;
+	padding:0 16px;
+    }
+    .globalfooter .gf-content .col{
+	width:100%;
+    }
+    .gf-content h3:after{
+	content:"+";
+	color:black;
+	float:right;
+    }
+    .col-section{
+	border-bottom:1px solid black;
+    }
+    .globalfooter .gf-content ul{
+	visibility:hidden;
+	position:absolute;
+    }
+    .x{
+	padding-top:0px;
+    }
+
+    #bigul{
+	display:none;
+    }
+    #smallul{
+	display:block;
+    }
+    .promo li{
+	width:100%;
+	border-right:none;
+    }
+    .promo-watch{
+	background:url('../images/promo_holiday_watch_small.jpg')
+    }
+    .promo-ios-preview{
+	background:url('../images/promo_ios93preview_small.jpg')
+    }
+    .promo-macbook{
+	background:url('../images/promo_macbook_small.jpg')
+    }
+    .promo-iphone6s{
+	background:url('../images/promo_startsomethingnew_iphone6s_small.jpg')
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.container{
+		width:600px;
+		height:600px;
+		border:1px solid black;
+		margin:0 auto;
+		position: relative;
+	}
+	.yuan{
+		position: absolute;
+		border: 1px solid black;
+		border-radius:50%;
+	}
+	span{
+		display: block;
+	}
+	.zhaodao{
+		background: red;
+	}
+	</style>
+</head>
+<body>
+	<div id="container" class="container"></div>
+	<input type="button" value="id">
+	<input type="button" value="class">
+	<input type="button" value="tagname">
+	<input type="button" value="selector">
+	<input type="button" value="selectorAll">
+</body>
+<script>
+	var  container = document.getElementById('container');
+	var r = Math.floor(Math.random()*100);
+	for(var i = 0; i< 100; i++){
+		if(i == r){
+			var el = document.createElement('span');
+			el.id = 'ni';
+			el.className = 'yuan ni';
+
+		}else{
+			var el = document.createElement('div');
+			el.className = 'yuan';
+		}
+		
+		el.style.width = Math.random()*30+ 20 +'px';
+		el.style.height = Math.random()*30+ 20 + 'px';
+		el.style.left = Math.random()*550 + 'px';
+		el.style.top = Math.random()*550 + 'px';
+		container.appendChild(el) 
+	}
+
+	var buttons = document.getElementsByTagName('input');
+	for(var i=0; i<buttons.length; i++){
+		buttons[i].onclick = function () {
+			if(this.value == 'id'){
+				var el = document.getElementById('ni');
+				el.classList.add('zhaodao');
+				
+			}
+			if(this.value == 'class'){
+				var el = document.getElementsByClassName('ni')[0];
+				el.classList.add('zhaodao');
+			}
+
+			setTimeout(function () {
+				el.classList.remove('zhaodao');
+			},300);
+		}
+	}
+</script>
+</html>

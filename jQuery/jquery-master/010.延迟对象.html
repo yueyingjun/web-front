@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>延迟对象</title>
+    <script src="jquery.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <ul>
+      <li></li>
+    </ul>
+  </body>
+  <script type="text/javascript">
+    var fakeDataDoneCallback = $.Callbacks();
+    var renderData = function(data){
+      var html  = '';
+      $.each(data.students,function(i){
+        html += '<li>' + data.students[i].name + '</li>';
+      })
+      $('ul').html(html);
+    }
+    var addInfo = function (data) {
+      $('body').append('<h1>'+data.school+'</h1>');
+    }
+    fakeDataDoneCallback.add(renderData)
+    fakeDataDoneCallback.add(addInfo)
+
+    $.ajax({
+      url:'fakeData.json',
+      dataType:'json'
+    }).done(function(data){
+      fakeDataDoneCallback.fire(data);
+    })
+  </script>
+</html>

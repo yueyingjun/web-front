@@ -1,0 +1,11 @@
+{
+  "school":"sanzhong",
+  "banji":"239",
+  "students":[
+    {"name":"zhangsan","age":12,"sex":true},
+    {"name":"lisi","age":22,"sex":true},
+    {"name":"wangwu","age":32,"sex":false},
+    {"name":"zhaoliu","age":42,"sex":true},
+    {"name":"chenqi","age":52,"sex":true}
+  ]
+}

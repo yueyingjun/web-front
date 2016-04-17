@@ -1,0 +1,303 @@
+body{
+  margin:0;
+  font-family:"微软雅黑";
+  height:2000px;
+}
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
+.clearfix:after{
+  display: block;
+  content:' ';
+  clear:both;
+  line-height: 0;
+  font-size:0;
+}
+.container{
+  width:940px;
+  margin:0 auto;
+  padding:20px 30px;
+  overflow:hidden;
+}
+.list-item{
+  position:relative;
+  overflow:hidden;
+  padding:20px 10px;
+  box-shadow: 0 0 3px black;
+  margin-bottom:5px;
+}
+.list-item ul{
+  list-style:none;
+}
+.list-item li{
+  width:50%;
+  float:left;
+}
+.list-item .sample{
+  background:rgba(0,0,0,0.3);
+  box-shadow:0 0 1px black;
+  width:100px;
+  height:100px;
+  /*cubic-bezier函数接受四个参数
+  前两个参数代表一个点的坐标,
+  后两个参数代表一个点的坐标.
+  */
+  transition:all .6s ease-in-out;
+}
+.sample.rotate-z:hover{
+  transform:rotateZ(-30deg);
+}
+.sample.o-l-c{
+  transform-origin: left center;
+}
+.sample.o-t-c{
+  transform-origin: top center;
+}
+.sample.rotate-x:hover{
+  transform:rotateX(360deg);
+}
+.sample.rotate-y:hover{
+  transform:rotateY(360deg);
+}
+.sample.translate-x-1{
+  transform:translateX(1340px);
+}
+.list-item:hover .sample.translate-x-1{
+  transform:translateX(0px);
+}
+.sample.translate-x-2{
+  transform:translateX(-1340px);
+}
+.list-item:hover .sample.translate-x-2{
+  transform:translateX(0px);
+}
+
+
+.sample.translate-y-1,.sample.translate-y-2{
+  position:absolute;
+  left:0;
+  width:100%;
+  background: rgba(125,25,34,0.4);
+  height:50%;
+}
+.sample.translate-y-1{
+  top:0;
+  transform:translateY(-200px);
+}
+.sample.translate-y-2{
+  top:52%;
+  transform:translateY(200px);
+}
+.list-item:hover .sample.translate-y-1,.list-item:hover .sample.translate-y-2{
+  transform:translateY(0px);
+}
+.sample.scale{
+  /*width:100%;*/
+  box-shadow:none;
+  transform:scale(1,1);
+  background-image: url('./a.jpeg');
+  background-size: cover;
+}
+/*.sample.scale-d{
+  width:100%;
+  box-shadow:none;
+  transform:scale(1,-1);
+  background-image: url('./a.jpeg');
+  background-size: cover;
+}*/
+.sample.skew:hover{
+  transform:skew(15deg,15deg);
+}
+.sample.translate-z-1{
+  position:absolute;
+  top:0;
+  left:0;
+}
+.sample.translate-z-2{
+  position:absolute;
+  top:0;
+  right:0;
+}
+.sample.translate-z-3{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-50px;
+  margin-top:-50px;
+}
+.sample.translate-z-4{
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+.sample.translate-z-5{
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+.sample.translate-z-1:hover,.sample.translate-z-2:hover,.sample.translate-z-3:hover,.sample.translate-z-4:hover,.sample.translate-z-5:hover{
+  transform:translateZ(300px);
+}
+#slides{
+  border:1px solid black;
+  width:100%;
+  height:200px;
+  position: relative;
+  perspective: 1200px;
+}
+#slides .sample{
+  width:200px;
+  text-align: center;
+  line-height: 100px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left: -100px;
+  margin-top: -50px;
+  transition:all .625s ease;
+}
+.sample.slide-1{
+  transform:translateX(-400px)  translateZ(-400px);
+}
+.sample.slide-2{
+  transform:translateX(-200px)  translateZ(-200px);
+}
+.sample.slide-3{
+  transform:translateX(0) translateZ(0px);
+}
+.sample.slide-4{
+  transform:translateX(200px)  translateZ(-200px);
+}
+.sample.slide-5{
+  transform:translateX(400px)  translateZ(-400px);
+}
+
+#changjing{
+  position:relative;
+  border:1px solid black;
+  width:300px;
+  height:300px;
+  perspective: 1200px;
+}
+
+.list-item{
+  transition:all .6s ease;
+  /*transform:translateX(1000px);*/
+}
+.back{
+  /*transform:translateX(0px);*/
+}
+/*
+:before和:after伪类选择器会给选中的元素添加
+一个子元素
+before作为第一个子元素
+after作为最后一个子元素
+必须写content属性
+它的display默认是inline的
+*/
+#rz:before{
+  content:'rotatez';
+  display:block;
+  position:absolute;
+  background: red;
+  padding:2px 20px;
+  color:white;
+  top:8px;
+  left:-18px;
+  font-size:10px;
+  transform:rotateZ(-45deg);
+}
+.list-item h4:after{
+  content:"origin:(center,center)";
+  color:#555;
+  font-weight: normal;
+  display: block;
+  padding:10px 0;
+}
+.list-item .l-c:after{
+  content:"origin:(left,center)";
+}
+.list-item .t-c:after{
+  content:"origin:(top,center)";
+}
+
+#cubes{
+  width:100%;
+  border:1px solid black;
+  width:600px;
+  height:600px;
+  position:relative;
+  perspective: 1000px;
+  perspective-origin: 90% 0%;
+}
+#cubes .sample{
+  width:300px;
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.sample.cube-1{
+  transform:translateZ(150px);
+}
+.sample.cube-2{
+  transform:translateZ(-150px);
+}
+.sample.cube-3{
+  transform:rotateY(90deg) translateZ(150px);
+}
+.sample.cube-4{
+  transform:rotateY(-90deg) translateZ(150px);
+}
+.sample.cube-5{
+  transform:rotateX(90deg) translateZ(150px);
+}
+.sample.cube-6{
+  transform:rotateX(-90deg) translateZ(150px);
+}
+#rongqi{
+  border:1px solid black;
+  width:300px;
+  height: 300px;
+  position:absolute;
+  top:50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  transition: all .6s ease;
+  transform-style:preserve-3d;
+}
+#rongqi:hover{
+  transform: rotateY(360deg);
+}
+/*width:10em*/
+/*transform:rotateZ(360deg)*/
+/*transform:fn(pram,..)  fn(pram,..) ..;
+transform:martix(0,0,0,0,0,0);*/
+/*应用了变形函数的div
+类似于应用了position:relative的div
+背景图片 -> 正常元素  -> 浮动元素 -> 变形元素 -> ->定位元素*/
+
+@media (max-width:1000px){
+  .container{
+    width:auto;
+  }
+  /*@media内部的选择器遵循正常的选择器规则*/
+  /*@media规则一般写在css文件尾部*/
+  /*想在@media内部覆盖一个前面的样式,一定要至少保持选择器优先级一致*/
+  .list-item li{
+    float:none;
+    width:100%;
+    font-size:30px;
+    padding:30px 0;
+    text-align: center;
+  }
+  .list-item .sample{
+    margin:0  auto;
+  }
+}

@@ -1,0 +1,38 @@
+body{
+  font-family: "Arial";
+  margin:0;
+}
+.content{
+  height:75%;
+  min-height:658px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.slide{
+  color:white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  transition:transform .4s cubic-bezier(1,0,0,1);
+}
+.slide:nth-child(1){
+  background: url(./home_hero_ssn_large.png);
+  background-size: auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.slide:nth-child(2){
+  background: url(./home_hero_evergreen_ipad_medium.jpg);
+  background-size: auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.slide:nth-child(3){
+  background: url(./home_hero_apple_tv_evergreen_medium.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+}

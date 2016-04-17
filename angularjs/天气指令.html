@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.js"></script>
+	<style>
+	body{
+		height:1000px;
+	}
+	.weather{
+		width:300px;
+		height: 300px;
+		position: absolute;
+		right:40px;
+		top:40px;
+		margin:0 auto;
+		box-shadow: 0 0 3px black;
+		padding: 20px 40px;
+		font-family: "broadWay"
+	}
+	</style>
+	<script type="text/ng-template" id="weather">
+		<div class="weather">
+			<h1>{{data.currentCity}}</h1>
+			<h2>{{data.weather_data[0].date}}</h2>
+			<h3>{{data.weather_data[0].temperature}}</h3>
+			<h3>空气质量: {{data.pm25}} : {{data.pm25}}</h3>
+			<ul>
+				<li ng-repeat="value in data.weather_data" ng-hide="$index == 0">
+					<span>{{value.date}}</span>
+					<span>{{value.temperature}}</span>
+				</li>
+			</ul>
+		</div>
+	</script>
+</head>
+<body ng-controller="myctrl">
+	<div weather></div>
+</body>
+<script>
+	var myapp = angular.module('myapp',[]);
+	myapp.directive('weather', ['$http', function($http){
+		return {
+			scope: {},
+			controller: function($scope, $element, $attrs, $transclude) {
+				var location = '112.56,37.73';
+				var ak  =  '1imlG87L8GlD4KMLKOL0bOaE';
+				var url =  'http://api.map.baidu.com/telematics/v3/weather?location='+location+'&output=json&ak='+ak+'&callback=JSON_CALLBACK';
+        console.log(url);
+				$http.jsonp(url).then(function (res) {
+					$scope.data = res.data.results[0];
+				})
+			},
+			restrict: 'A',
+			templateUrl: 'weather',
+			replace: true,
+			link: function($scope, iElm, iAttrs, controller) {
+				if(!$scope.data){
+					var els = iElm[0].children;
+					console.log(els);
+					for(var i=0; i<els.length; i++){
+						els[i].style.display  = 'none';
+					}
+
+				}
+				window.onscroll  = function () {
+					if(document.body.scrollTop == 0){
+						iElm[0].style.display = 'block';
+					}else{
+						iElm[0].style.display = 'none';
+					}
+				}
+			}
+		};
+	}]);
+	myapp.controller('myctrl', ['$scope', function($scope){
+
+	}])
+</script>
+</html>

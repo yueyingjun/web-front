@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>常用指令的复习</title>
+	<script src="angular.js"></script>
+</head>
+<body>
+	<div ng-controller="myctrl">
+		<h1 ng-bind="title"></h1>
+		<h5 ng-bind="list['a']"></h5>
+		<div ng-repeat="(key, value) in list" ng-class="{active:$first}" ng-hide="$last">
+			<span>{{$index+1}}</span>
+			<span>{{key}}</span>
+			<span>{{value}}</span>
+		</div>
+	</div>
+</body>
+
+<script>
+	var myapp = angular.module('myapp',[]);
+	myapp.controller('myctrl', ['$scope', function($scope){
+		$scope.title = '指令的复习';	
+		$scope.list  = {
+			a:'xxxxx1',
+			b:'xxxxx2',
+			c:'xxxxx3'
+		}
+	}])
+</script>
+</html>

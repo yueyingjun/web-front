@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="angular.js"></script>
+	<style>
+
+	</style>
+	<script type="text/ng-template" id="cc">
+		<div>
+			<ul>
+				<li>{{user.name}}</li>
+				<li>{{user.age}}</li>
+				<li>{{city}}</li>
+			</ul>
+			<input type="text" ng-model="user.name">
+			<input type="text" ng-model="user.age">
+			<input type="range">
+			<input type="color">
+			<div ng-transclude></div>
+		</div>	
+	</script>
+
+</head>
+<body ng-controller="myctrl">
+	{{user.name}}
+	<p card xy="{{city}}">
+		<span>{{user.name}}</span>
+		<span>{{user.age}}</span>
+	</p>
+</body>
+<script>
+	var myapp = angular.module('myapp',[]);
+	myapp.directive('card', [function(){
+		return {
+			scope:{
+			},
+			controller:function($scope,$element,$transclude,$attrs){
+				$scope.user = {name:'李四',age:22};
+				// angular.element($element).css({'background':'red'});
+				// $scope.city = $attrs.xy;
+			},
+			restrict:'A',
+			replace:true,
+			transclude:true,
+			templateUrl:'cc',
+			link:function($scope,iElm,iAttrs,controller){ 
+				//如果需要大规模操作dom 添加事件 移动dom
+				//不要在controller中去做.
+				//而是把要操作的元素封装成一个指令
+				//在指令的link函数中去使用jqLite操作元素
+				$scope.city = iAttrs.xy;
+				angular.element(iElm).find('li').bind('click',function(){
+					alert(1);
+				});
+			}
+		};
+	}]);
+
+	myapp.controller('myctrl',['$scope',function($scope){
+		$scope.user = {name:'张三',age:20};
+		$scope.city = '北京';
+	}]);
+</script>
+</html>

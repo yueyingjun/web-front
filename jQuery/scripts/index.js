@@ -202,4 +202,62 @@ window.onload = function(){
   //3.var o = {a:1,b:2}    o.b in a
   //4.var f = function(){} f.prototype.mybind 实现
   //5.
+  //
+
+
+
+  var fn = function(){
+    var a  = 10;b=2;
+    console.log(a,b,c);
+    var c = 0;
+  }
+  fn();
+  //1.
+  //2.javascript 中 在一个作用域内
+  //           任何自由位置
+  //           使用var 声明的变量
+  //           会被提前到该作用域顶点
+
+  var a = [1,2]  var b = [1,2]
+  var f1 = function(){console.log(1);}
+  var f2 = function(){console.log(1);}
+  var a = {}, b ={};
+
+  var a = 12  var b = 12
+  a == b
+  //js中   数组  函数 对象  是引用类型的
+
+  //       数字 字符串 布尔 undefined  null
+
+
+  // 'a' in o  in 运算符用来检测 对象中有没有某个属性  (全作用域链都检查)
+  //  o.hasOwnProperty('a')
+
+  //  hasOwnProperty方法也是用来检测对象中有没有某个属性
+  //  这个方法不检测原型链
+
+  // 'createElement' in document
+  // document.hasOwnProperty('createElement');
+  // [1,3,5,8,12,119,222,333,10001].sort(function(a,b){
+  //   console.log(a,b);
+  //   return a < b;
+  // });
+  Array.prototype.myMap = function(fn){
+    var r = [];
+    for ( var i = 0;  i < this.length;  i++){
+      r.push( fn.apply(this, [this[i],i,this] ) );
+    }
+    return r;
+  };
+  var arr = [1,3,9,12,89];
+  arr.filter(function(a,b,c){
+    return a>9;
+  });
+  console.log(arr);
+
+
+
+
+
+
 };

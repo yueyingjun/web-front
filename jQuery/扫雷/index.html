@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../jquery-1.12.1.js"></script>
+  </head>
+  <style media="screen">
+    .sence{
+      width: 600px;
+      height: 600px;
+      border: 1px solid black;
+      background: black;
+      border-right: none;
+      border-bottom: none;
+    }
+    .block{
+      font-family: 'broadWay';
+      text-align:center;
+      font-size:2em;
+      color:white;
+      line-height: 59px;
+      float:left;
+      width: 59px;
+      height: 59px;
+      margin:0 1px 1px 0;
+      background: white;
+    }
+    .scale{
+      -webkit-animation: fangdasuoxiao .6s ease;
+    }
+    @-webkit-keyframes fangdasuoxiao{
+      0%,100%{
+        -webkit-transform:scale(1,1);
+      }
+      90%{
+        -webkit-transform:scale(1.2,1.2);
+      }
+    }
+
+    .green{
+      background:#49bf1f;
+    }
+    .purple{
+      background:#b14bc9;
+    }
+    .orange{
+      background: #ff7f00;
+    }
+    .blue{
+      background:#1badf8;
+    }
+    .brow{
+      background:#a2845e;
+    }
+    .yellow{
+      background:#e0ac00;
+    }
+    .pink{
+      background:#ff2968;
+    }
+  </style>
+  <body>
+    <div class="sence">
+    </div>
+  </body>
+  <script type="text/javascript">
+    var
+    row = 10, el = '',
+    colors = ['purple','blue','green','orange','pink','brow'];
+    for (var i = 0; i < Math.pow(row+2,2); i++) {
+      el += '<div></div>'
+    }
+
+    $('.sence')
+    .html(el)
+    .find('div')
+    .addClass(function (i) {
+      return 'block ' + colors[i%5];
+    }).end()
+    .find('div:lt(12)')
+    .removeClass().end()
+    .find('div:gt(131)')
+    .removeClass().end()
+    .find('div:nth-child(12n+1)')
+    .removeClass().end()
+    .find('div:nth-child(12n)')
+    .removeClass().end()
+    .find('div')
+    .each(function (i) {
+      $(this).data('index',i);
+    }).end()
+    .find('.block')
+    .each(function () {
+      if(Math.random()>0.8){
+        $(this).data('islei',true).text('lei');
+      }
+    })
+    .click(function () {
+      if( $(this).data('islei') ){
+        alert('bow!!');
+      }else{
+        var
+        pos   = $(this).data('index'),
+        shuzi = 0,  $els = $('.sence div');
+        if( $els.eq(pos- 1).data('islei') ){shuzi++};
+        if( $els.eq(pos+ 1).data('islei') ){shuzi++};
+        if( $els.eq(pos-11).data('islei') ){shuzi++};
+        if( $els.eq(pos-12).data('islei') ){shuzi++};
+        if( $els.eq(pos-13).data('islei') ){shuzi++};
+        if( $els.eq(pos+11).data('islei') ){shuzi++};
+        if( $els.eq(pos+12).data('islei') ){shuzi++};
+        if( $els.eq(pos+13).data('islei') ){shuzi++};
+        $(this).text(shuzi);
+      }
+    })
+  </script>
+</html>

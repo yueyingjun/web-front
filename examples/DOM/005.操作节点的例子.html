@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      ul,li{
+        margin:0;
+        padding: 0;
+        list-style: none;
+      }
+      #zhuozi{
+        width: 600px;
+        height: 400px;
+        border: 1px solid black;
+        margin: 0  auto;
+      }
+      #zhuozi li{
+        width: 42px;
+        height: 100px;
+        border: 1px solid black;
+        float:left;
+      }
+      .hongtao{
+        background: rgba(255,0,0,0.3);
+      }
+      .fangpian{
+        background: rgba(255,145,0,0.3);
+      }
+      .heitao{
+        background: rgba(0,0,0,0.6);
+        color:white;
+      }
+      .meihua{
+        background: rgba(0,0,0,0.3);
+        color:white;
+      }
+      #wo,#ni,#ta{
+        border: 1px solid black;
+        width: 600px;
+        height: 200px;
+        margin: 10px auto;
+      }
+      #wo li,#ni li,#ta li{
+        width: 30px;
+        height: 100%;
+        border: 1px solid black;
+        float: left;
+      }
+      #ni{
+        transform-origin:top center;
+        transform:rotateZ(90deg) translate3d(-320px,400px,0);
+      }
+      #ta{
+        transform-origin:top center;
+        transform:rotateZ(90deg) translate3d(-534px,-580px,0);
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="zhuozi">
+    </ul>
+    <ul id="wo"></ul>
+    <ul id="ni"></ul>
+    <ul id="ta"></ul>
+  </body>
+  <script type="text/javascript">
+    var shengchengpai = function (){
+      var puke = [];
+      var huases = ['hongtao','heitao','fangpian','meihua']
+      var zidian = {};
+      while(puke.length < 52){
+        var h = huases[Math.floor( Math.random()*4 )];
+        var s = Math.ceil( Math.random()*13  );
+        if( !zidian[h+s] ){
+          puke.push( {huase:h,shuzi:s} )
+          zidian[h+s] = true;
+        }
+      }
+      return puke;
+    }
+    var pai = shengchengpai();
+    pai.forEach(function(value){
+      var el = document.createElement('li');
+      el.innerHTML = value.shuzi;
+      el.className = value.huase;
+      zhuozi.appendChild(el);
+    })
+    var cishu = 0;
+    var fapai = function () {
+      if(cishu == 51){
+        clearInterval(timerId);
+      }
+      var n =  Math.floor(Math.random()*zhuozi.children.length);
+      if(cishu %3 == 0){
+        var kaiguan = true;
+        var zhezhang = parseInt(zhuozi.children[n].innerHTML);
+        for(var i=0; i<wo.children.length; i++){
+          var nazhang = parseInt(wo.children[i].innerHTML);
+          if( zhezhang > nazhang ){
+            wo.insertBefore(zhuozi.children[n],wo.children[i])
+            kaiguan = false;
+            break;
+          }
+        }
+        if(kaiguan){
+          wo.appendChild(zhuozi.children[n]);
+        }
+      }
+      if(cishu %3 == 1){
+        ni.appendChild(zhuozi.children[n]);
+      }
+      if(cishu %3 == 2){
+        ta.appendChild(zhuozi.children[n]);
+      }
+      cishu += 1;
+    }
+    var timerId = setInterval(fapai,10)
+    wo.addEventListener('click',function (e) {
+      var el  = e.target;
+      if(el == this){return;}
+      el.style.marginTop = '-10px';
+    })
+
+    var xuanpai = function (ev) {
+      if(ev.target == wo){return}
+      ev.target.style.marginTop = '-20px';
+      ev.target.setAttribute('chulie','true');
+    }
+    wo.addEventListener('mousedown',function (e) {
+      wo.addEventListener('mousemove',xuanpai,false);
+    },false)
+    wo.addEventListener('mouseup',function () {
+      wo.removeEventListener('mousemove',xuanpai,false)
+    })
+
+    var chupai = new Event('chupai');
+    wo.addEventListener('chupai',function () {
+      var els = this.querySelectorAll('li[chulie]');
+      for (var i = 0; i < els.length; i++) {
+        els[i].style.marginTop = '0px';
+        zhuozi.appendChild(els[i]);
+      }
+    },false)
+
+    zhuozi.addEventListener('click',function () {
+      wo.dispatchEvent(chupai);
+    })
+  </script>
+</html>

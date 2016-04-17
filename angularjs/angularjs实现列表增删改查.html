@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>angularjs实现列表的增删改查</title>
+	<script src="angular.js"></script>
+	<style>
+	.active{
+		color:orange;
+	}
+	ul{
+		list-style: none;
+	}
+	ul li span{
+		display: inline-block;
+		width:20%;
+	}
+	</style>
+</head>
+<body ng-controller="myctrl">
+
+	<ul>
+	<li ng-repeat="value in yinyueku">
+		<span>{{value.name}}</span>
+		<button ng-click = "addSong($index)">添加到列表</button>
+	</li>
+	</ul>
+
+	<button>清空列表</button>
+	<ul>
+	<li ng-class="{active:$index == sindex}" class="" ng-repeat="value in bofangliebiao" ng-click="setSong($index)">
+		<span>{{value.name}}</span>	
+		<span>{{value.geshou}}</span>	
+		<span>{{value.duration}}</span>	
+		<button ng-click="deleteItem($index)">删除</button>
+	</li>
+	</ul>	
+	<ol>
+		<li>{{ bofangliebiao[sindex].name || 'qq音乐'}}</li>
+		<li>{{ bofangliebiao[sindex].geshou || '听你想听的歌'}}</li>
+		<li ng-show="sindex">{{ bofangliebiao[sindex].duration}}</li>
+	</ol>
+</body>
+<script>
+	var myapp = angular.module('myapp',[]);
+	myapp.controller('myctrl', ['$scope', function($scope){
+
+		$scope.isequal = function(o1,o2) {
+			if(o1.name == o2.name &&
+				o1.geshou == o2.geshou&&
+				o1.duration == o2.duration){
+				return true;
+			}
+			return false;
+		}
+
+		$scope.addSong = function(index) {
+			for(var i=0; i<$scope.bofangliebiao.length; i++){
+				if( $scope.isequal($scope.yinyueku[index], $scope.bofangliebiao[i]) ){
+					return;
+				}
+			}
+			$scope.bofangliebiao.push($scope.yinyueku[index]);
+			localStorage.x = JSON.stringify($scope.bofangliebiao);
+		}
+		$scope.yinyueku = [
+		{name:'yequ',geshou:'aa',duration:'3:10'},
+		{name:'qianli',geshou:'bb',duration:'4:10'},
+		{name:'qilixiang',geshou:'cc',duration:'5:10'},
+		{name:'juhuatai',geshou:'dd',duration:'6:10'},
+		{name:'maiyatang',geshou:'ee',duration:'7:10'},
+		{name:'yequ11',geshou:'aa',duration:'3:10'},
+		{name:'qianli22',geshou:'bb',duration:'4:10'},
+		{name:'qilixiang33',geshou:'cc',duration:'5:10'},
+		{name:'juhuatai44',geshou:'dd',duration:'6:10'},
+		{name:'maiyatang55',geshou:'ee',duration:'7:10'},
+		]	
+
+		if(localStorage.x){
+			$scope.bofangliebiao = JSON.parse(localStorage.x);
+		}else{
+			$scope.bofangliebiao = [];
+		}
+
+		$scope.sindex = null;
+		$scope.setSong = function(index) {
+			$scope.sindex = index;
+		}
+		$scope.deleteItem = function(index) {
+			var r = [];
+			for(var i=0; i<$scope.bofangliebiao.length; i++)	{
+				if(i != index){
+					r.push($scope.bofangliebiao[i]);
+				}
+			}
+			$scope.bofangliebiao = r;
+			localStorage.x = JSON.stringify($scope.bofangliebiao);
+		}
+	}])
+</script>
+</html>

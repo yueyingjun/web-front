@@ -1,0 +1,28 @@
+<!-- 
+ng-app指令用来自动启动一个angularjs的应用 
+
+
+页面加载完成之后
+angular.js会去寻找带有ng-app属性的标签
+找到以后启动应用,并设置自己的权利范围为
+该标签的内部
+
+一个页面中只推荐使用一个ng-app指令
+不要嵌套
+不要写多个(写多个只有第一个会自动启动)
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.js"></script>
+</head>
+<body>
+<input type="text" ng-model="name">
+{{name}}
+</body>
+<script>
+	// var myapp = angular.module('myapp',[]);
+</script>
+</html>

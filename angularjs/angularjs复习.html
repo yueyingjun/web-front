@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="angular.js"></script>
+</head>
+<body ng-controller="myctrl">
+	<div kapian>
+		<h1>1345</h1>
+		<h1>1345</h1>
+		<h1>1345</h1>
+		<h1>1345</h1>
+		<h1>1345</h1>
+	</div>
+
+
+
+	<div ng-repeat="(key,value) in lis track by $index" ng-click="de(key)">
+		{{key|number:x1:x2}} {{value.name}}	{{value.sex}} {{value.age}}
+	</div>
+	<div ng-click="add()">+</div>
+
+	<input type="text" ng-model="aaaa">
+	{{aaaa}}	
+	<hr>
+	<span ng-bind="da[5].a"></span>
+	<ul>
+		<li ng-repeat="value in da[4]">
+			{{value}}
+		</li>
+		<li ng-repeat="(key,value) in da[5]">
+			{{key}}{{value}}
+		</li>
+	</ul>
+	<div ng-class="{a:da[4][2] == 4}" ng-if="da[1] == 'a'">1231313131313131</div>
+	<div ng-controller="myctrl-1">
+		
+	</div>
+</body>
+<script>
+	// ng-Animate
+	// $http
+	// $location
+
+	var myapp = angular.module('myapp',[]);
+	myapp.factory('$Math', [ function(){
+		return {
+			PI:3.13,
+		}
+	}])
+
+
+	myapp.directive('kapian', [function(){
+		// Runs during compile
+		return {
+			// scope: {}, // {} = isolate, true = child, false/undefined = no change
+			// controller: function($scope, $element, $attrs, $transclude) {},
+			// require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
+			restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
+			template: '<div><div ng-transclude></div><h1>自定义指令</h1></div>',
+			// templateUrl: '',
+			replace: true,
+			transclude: true,
+			// compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
+			link: function($scope, iElm, iAttrs, controller) {
+				
+			}
+		};
+	}]);
+	myapp.controller('myctrl',['$scope',function($scope){
+		$scope.s = 'hello world';
+		$scope.da = {1:'a',4:[0,3,4],5:{a:1,b:2}};
+		var index = 2;
+		$scope.lis = {
+			0:{name:'a',sex:'nan',age:12},
+			1:{name:'b',sex:'nv',age:18},
+			2:{name:'c',sex:'nan',age:12}
+		}
+		$scope.de = function(key) {
+			delete $scope.lis[key];
+		}
+		$scope.add = function() {
+			index += 1;
+			$scope.lis[index] = {name:'a5',sex:'ae',age:12};
+		}
+		// removeItem();
+	}])
+	myapp.controller('myctrl-1', ['$scope', function($scope){
+		$scope.cc = 'abcd';	
+	}])
+
+
+
+</script>
+</html>

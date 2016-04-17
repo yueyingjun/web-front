@@ -1,0 +1,6 @@
+move(selector)
+.set().add().sub()
+.x().y().move().rotate().scale().skew()
+.then().pop()
+.ease('cubic-bezier(1,0,0,1)').duration('-1s')
+.end()

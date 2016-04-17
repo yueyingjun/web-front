@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+
+    var A  = {
+      push:function (value) {
+        this[this.length] = value;
+        this.length += 1;
+      },
+      shift:function () {
+      }
+    };
+    var myArray =  Object.create(A);
+    myArray[0] = 1;
+    myArray[1] = 2;
+    myArray[2] = 3;
+    myArray.length = 3;
+    myArray.push(4);
+    console.log(myArray);
+
+    </script>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery-1.12.1.js"></script>
+    <script src="jquery.js"></script>
+    <style media="screen">
+      *{
+        padding:20px;
+        margin:10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="aaa">
+      <li>1</li>
+      <li data-role="hasxia" xialaid="xxx">2
+        <span id="xxx" style="display:none"></span>
+      </li>
+      <li data-role="hasxiala">3
+        <span style="display:none"></span>
+      </li>
+      <li>4</li>
+    </ul>
+    <script type="text/javascript">
+      var $el = $('#aaa');
+      $el.children().bind('mouseover',function () {
+        $(this).find('*:hidden').show();
+      })
+      $el.children().bind('mouseout',function () {
+        $(this).find('span').hide();
+      })
+
+    </script>
+
+
+    <form class="form" action="index.html" method="post">
+      <input type="password" name="diyici" value="">
+      <input type="password" name="dierci" value="">
+    </form>
+
+    <div class="content">
+      <head>
+        <h1>文章标题</h1>
+      </head>
+      <ul>
+      </ul>
+      <article>
+        <h2>第一点:代表</h2>
+        <h3>1.1</h3>
+        <h3>1.2</h3>
+        <h3>1.3</h3>
+        <h2>第一点:代表</h2>
+        <h3>2.1</h3>
+        <h2>第2点:代表</h2>
+        <h2>第3点:代表</h2>
+        <h3>3.1</h3>
+      </article>
+    </div>
+    <script type="text/javascript">
+      //TODO:从页面中抽取目录按照层级
+      $(function () {
+        $('.content  *:header').each(function(index,el){
+          $('.content ul').append('<li>'+$(el).html()+'</li>');
+        });
+      })
+    </script>
+
+
+
+
+
+    <input id="input" type="text" name="name" value="">
+    <ul>
+      <li data-role="1">赵四三</li>
+      <li data-role="2">张三虎</li>
+      <li data-role="3">张三猫</li>
+      <li data-role="4">李二猫</li>
+    </ul>
+    <script type="text/javascript">
+      $(function(){
+        $(':input').bind('keyup',function(){
+          if( !$(this).val() ){
+            $(':input+ul li').show();
+            return;
+          }
+          var key = $(this).val();
+          $(':input+ul li').show();
+          $(':input+ul li').not(':contains('+key+')').hide();
+        })
+        $(':input').bind('blur',function () {
+          $(this).val('');
+          $(':input+ul li:hidden').show();
+        })
+      })
+    </script>
+
+    <div>
+      <ul id="ul">
+        <li class="first">1</li>
+        <li aa="3">2</li>
+        <li>
+          <span>1</span>
+          <span>2</span>
+          3
+          <div class="ceshi">div1</div>
+          <div class="ceshi" xuanzhong>div2</div>
+          <ul>
+            <li>3.1</li>
+            <li>3.2</li>
+          </ul>
+        </li>
+        <li>
+          <span>1</span>
+        </li>
+        <li>
+          <span>1</span>
+          <span>2</span>
+        </li>
+      </ul>
+      <dl>
+        <dt>1</dt>
+        <dd>1.1</dd>
+        <dd>1.2</dd>
+        <dd>1.3</dd>
+        <dd>1.4</dd>
+        <dt>2</dt>
+        <dt>2.1</dt>
+        <dt>2.2</dt>
+        <dt>2.3</dt>
+        <dt>2.4</dt>
+      </dl>
+    </div>
+  </body>
+</html>

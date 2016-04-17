@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      div{
+        margin:5px;
+        padding:20px;
+        border:1px solid black;
+      }
+      span{
+        width: 40px;
+        overflow: hidden;
+        display: block;
+        float:left;
+        margin-left: 7px;
+      }
+      div::after{
+        content:'';
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="da" id="da">
+      <div class="xiao">
+        <span>zhangsan</span>
+        <span>!!!!</span>
+        <span class="zan">赞</span>
+        <span class="cai">踩</span>
+      </div>
+      <div class="xiao">
+        <span>zhangsan</span>
+        <span>!!!!</span>
+        <span class="zan">赞</span>
+        <span class="cai">踩</span>
+      </div>
+    </div>
+    <button id="huoqu" type="button" name="button">获取</button>
+    <button id="zhuijia" type="button" name="button">追加</button>
+  </body>
+  <script type="text/javascript">
+  var data = [
+    {name:'xx',neirong:'sdfafa'},
+    {name:'yy',neirong:'aaasdfafa'}
+  ];
+
+  var chulixiaodedianji = (function(){
+    var pre;
+    return function (el) {
+      if(pre){
+        pre.style.background = 'none';
+      }
+      el.style.background = 'rgba(0,0,0,0.3)';
+      pre = el;
+    }
+  })();
+
+  var chulizandedianji = function (el) {
+    if(el.hasAttribute('dianguole')){
+      return;
+    }
+    alert('zanchenggong')
+    el.style.color = 'red';
+    el.innerHTML = '赞(+1)';
+    el.setAttribute('dianguole','true');
+  }
+  var feedhandler  = function (e) {
+    var el = e.target;
+    if( el.className == 'xiao'){
+      chulixiaodedianji(el);
+    }
+    else if( el.className == 'zan'){
+      chulizandedianji(el)
+    }
+    else if( el.className == 'cai'){
+      chulicai(el);
+    }
+  }
+  da.addEventListener('click',feedhandler,false);
+
+
+  huoqu.addEventListener('click',function () {
+    for (var i = 0; i < data.length; i++) {
+      var el = document.createElement('div');
+      el.className = 'xiao';
+      el.innerHTML = '<span>'+data[i].name+'</span><span>'+data[i].neirong+'</span><span class="zan">赞</span><span class="cai">踩</span>'
+      da.insertBefore(el,da.firstElementChild);
+    }
+  })
+  zhuijia.addEventListener('click',function () {
+    var el = document.createElement('div');
+    el.className = 'xiao';
+    el.innerHTML = '<span>wo</span><span>tianqihao</span><span class="zan">赞</span><span class="cai">踩</span>'
+    da.insertBefore(el,da.firstElementChild);
+  })
+  </script>
+</html>

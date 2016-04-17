@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>操作节点</title>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <ul>
+      <li>I</li>
+    </ul>
+  </body>
+  <script>
+    var els = document.querySelectorAll('ul');
+    var li = document.createElement('li');
+    li.innerHTML  = '34';
+    // els[1].appendChild(els[0].children[0]);
+    // els[1].removeChild(els[1].firstElementChild);
+    els[1].insertBefore(li,els[1].firstElementChild);
+    var el = els[0].firstElementChild.cloneNode(true);
+    els[1].appendChild(el);
+    var c = els[0].firstElementChild.nextElementSibling.cloneNode(true);
+    els[1].replaceChild(c,els[1].firstElementChild.nextElementSibling);
+
+    appendChild     父元素.appendChild(要追加的dom对象)
+    removeChild     父元素.removeChild(要移除的dom对象)
+    replaceChild    父元素.replaceChild(要替换的对象,被替换的对象)
+    insertBefore    父元素.insertBefore(要插入的对象,插入在谁之前中的那个谁)
+
+    cloneNode       dom对象.cloneNode()  会生成一个dom对象 true
+  </script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<!-- IE8不支持ES5,我们可以引入ES5-shim.js -->
+	<meta charset="UTF-8">
+	<title>ES5中的常用函数及其兼容性解决问题</title>
+	<script src="angular.js"></script>
+	<script src="jquery-1.12.1.js"></script>
+</head>
+<body ng-controller="myctrl">
+	<div id="a"></div>
+
+	<ul>
+		<li ng-click="delteItem($index)" ng-repeat="value in students">
+			<span ng-bind="value.name"></span>
+			<span ng-bind="value.age"></span>
+			<!-- ng-bind 防止页面UI闪烁  -->
+			<!-- 不利于SEO -->
+		</li>
+	</ul>
+</body>
+<script>
+	var myapp = angular.module('myapp',[]);
+	myapp.controller('myctrl', ['$scope', function($scope){
+		$scope.students = [
+			{name:'aa',age:12},
+			{name:'bb',age:18},
+			{name:'cc',age:19},
+			{name:'dd',age:22}
+		]
+		$scope.delteItem = function(index) {
+			$scope.students = $scope.students.filter(function(value,i){
+				return i != index;
+			})	
+		}
+	}])
+
+
+
+	var arr = [
+	{a:1,b:2},
+	{a:9,b:2},
+	{a:21,b:2},
+	{a:85,b:2},
+	{a:13,b:2},
+	];
+	arr.sort(function(x1,x2){
+		return  x1.a < x2.a;
+	})
+	console.dir( $('#a') ) ;
+</script>
+</html>

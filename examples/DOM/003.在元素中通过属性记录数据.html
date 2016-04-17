@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <style>
+      .box{
+        position: absolute;
+        top:-50%;
+        left:100%;
+        border-radius:10px;
+        padding:20px;
+        border:1px solid black;
+        background: black;
+        color:white;
+      }
+      div{
+        width:300px;
+        border:1px solid black;
+      }
+      span{
+        display: block;
+        width:300px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class=""  youtanchu="true" tanchu-title="张三" tanchu-neirong="某上市公司总经理">
+      张三
+    </div>
+
+    <span youtanchu="true" tanchu-title="李四" tanchu-neirong="有一个上市公司的总经理">
+      李四
+    </span>
+
+  </body>
+  <script>
+    var els = document.querySelectorAll('*[youtanchu]');
+    var chulitanchu = function(){
+      if(this.getAttribute('youtanchu') == 'true'){
+        if( this.querySelector('.box') ){
+          this.querySelector('.box').style.display = 'block';
+          this.setAttribute('youtanchu','false');
+          return;
+        }
+        this.setAttribute('youtanchu','false');
+        this.style.display = 'block';
+        this.style.position = 'relative';
+        var title = document.createElement('div');
+        title.innerHTML = this.getAttribute('tanchu-title');
+        var neirong = document.createElement('div');
+        neirong.innerHTML = this.getAttribute('tanchu-neirong');
+        var box = document.createElement('div');
+        box.className = 'box';
+        box.appendChild(title);
+        box.appendChild(neirong);
+        this.appendChild(box);
+      }else{
+        this.querySelector('.box').style.display = 'none';
+        this.setAttribute('youtanchu','true');
+      }
+    }
+    for(var i=0; i<els.length; i++){
+      els[i].onclick =  chulitanchu;
+    }
+  </script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>利用ng-repeat指令去展示列表数据</title>
+	<script src="angular.js"></script>
+	<style>
+	.a{
+		color:purple;
+	}
+	.b{
+		color:red;
+	}
+	.c{
+		background: #ccc;
+	}
+	.d{
+		font-weight: bolder;
+	}
+	.e{
+		background: rgba(255,0,0,0.3);
+	}
+	</style>
+</head>
+<body ng-controller="myctrl">
+	<ul>
+		<!-- $index $even $odd $last $first $middle -->
+		<li  ng-repeat="(key, value) in booklist" ng-class="{a:$first,b:$last,c:$even,d:$middle,e:over}" ng-click="click($index)" ng-mouseover="over=true" ng-mouseleave="over=false">
+			<span>{{$index + 1}}</span>
+			<span>{{value.name}}</span>
+			<span ng-hide="$odd">{{value.author}}</span>
+		</li>
+	</ul>	
+</body>
+<script>
+	var myapp = angular.module('myapp',[]);
+	myapp.controller('myctrl', ['$scope', function($scope){
+		$scope.booklist = [
+		{name:'红楼梦',author:'曹雪芹'},
+		{name:'红楼',author:'雪芹'},
+		{name:'西游记',author:'吴承恩'},
+		{name:'水浒传',author:'施耐庵'},
+		{name:'三国演义',author:'罗贯中'}
+		];
+		$scope.click = function(i) {
+			alert(i);
+		}
+	}])
+</script>
+</html>

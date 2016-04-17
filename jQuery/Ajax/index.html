@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>学生管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/jquery.js" charset="utf-8"></script>
+  <script src="js/index.js"  charset="utf-8"></script>
+  <!-- <script src="js/test.js"  charset="utf-8"></script> -->
+</head>
+<body>
+  <!-- <form action="/php/deleteStudent.php" method="post">
+    <input type="hidden" name="id" value="12"> -->
+    <!-- <input type="color" name="" value="">
+    <input type="range" name="" value="">
+    <input type="date" name="" value="">
+    <input type="email" name="" value=""> -->
+    <!-- 账号:<input type="text" name="zhanghao" value="12">
+    密码:<input type="password" name="password" value="xx">
+    篮球:<input type="checkbox" checked name="aihao[]" value="篮球">
+    足球:<input type="checkbox" name="aihao[]" value="足球">
+    排球:<input type="checkbox" name="aihao[]" value="排球">
+    男:<input type="radio" checked name="sex" value="男">
+    女:<input type="radio" name="sex" value="女">
+    <select class="" multiple="3" name="guojia[]">
+      <option value="meiguo" >1</option>
+      <option value="zhongguo" selected>2</option>
+      <option value="faguo">3</option>
+    </select>
+    <input type="submit" value="提交">
+  </form> -->
+
+  <!-- <iframe width="600" border="none" src="http://www.disney.com"></iframe>
+  <ul>
+    <li data-role="http://www.baidu.com">baidu</li>
+    <li data-role="http://www.sina.com">xilnag</li>
+  </ul> -->
+  <!-- <script>
+    $(function(){
+      var $iframe = $('iframe');
+      $iframe.next().children().bind('click',function(){
+        $iframe.attr('src',$(this).attr('data-role') )
+      })
+    })
+  </script> -->
+
+  <div class="container">
+    <h1 class="title">学生管理系统<div></div></h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>学号</th>
+          <th>姓名</th>
+          <th>性别</th>
+          <th>年龄</th>
+          <th>成绩</th>
+          <th><input id="xuanze" type="checkbox"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr> <th scope="row">1</th> <td><input type="text" name="username" value="Mark"></td> <td>男</td> <td>16</td> <td>98</td> <td><input type="checkbox"></td> </tr> -->
+      </tbody>
+    </table>
+
+    <div class="opration row">
+      <div class="col-xs-4 pull-right">
+        <div id="tongbu" class="btn btn-primary">同步</div>
+        <div id="add" class="btn btn-success">新增</div>
+        <div id="shanchu" class="btn btn-danger">删除</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

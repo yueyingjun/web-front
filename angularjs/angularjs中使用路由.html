@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="weixin">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.js"></script>
+	<script src="angular-route.js"></script>
+	<script type="text/ng-template" id="me">
+		<div><h1>我</h1></div>
+	</script>
+	<script type="text/ng-template" id="chat">
+		<div>
+			<h1>{{title}}</h1>
+			<ul>
+				<li ng-repeat="(key,value) in chatlist">
+					<a href="#/chatshow/{{key}}">点击查看详情</a>
+					<span>{{value.name}}</span>
+					<span>{{value.lastMessage}}</span>
+				</li>
+			</ul>
+		</div>
+	</script>
+	<script type="text/ng-template" id="chatshow">
+		<div>
+			<h1>聊天详情</h1>
+			{{data}}
+		</div>
+	</script>
+</head>
+<body ng-controller="indexCtrl">
+    <ul>
+    	<li><a href="#/">聊天列表</a></li>
+    	<li><a href="#/me">我</a></li>
+    </ul>
+    <style>.view{width:600px;height:600px;border:1px solid black;margin:0 auto}</style>
+    <div class="view">
+    	<div ng-view></div>	
+    </div>
+</body>
+<script>
+	var weixin = angular.module('weixin',['ngRoute']);
+	weixin.controller('indexCtrl', ['$scope', function($scope){
+			
+	}]);
+
+	weixin.value('version', {a:1,b:2});
+	weixin.constant('appname', 'wiexin');
+	weixin.factory('$Math', [function(){
+		return {
+			PI:3.4,
+			add:function(a,b){return a+b;},
+			changfa:function(a,b){return a*c},
+			chufa:function (a,b) {return a/b},
+			getData:function(){
+				return  {
+					0:{name:"张三",lastMessage:'小心',history:'a:nihao,wo:buhao'},
+					1:{name:"李四",lastMessage:'小心!',history:'b:nihao,wo:tinghao'},
+					2:{name:"王五",lastMessage:'小心!!',history:'c:nihao,wo:afafa'}
+				}
+			}
+		}
+	}])
+	weixin.controller('chatCtrl', ['$scope','$Math','version','appname',function($scope,$Math,version,appname){
+		$scope.title = '聊天';
+		$scope.chatlist = $Math.getData();
+		console.log(appname);
+	}])
+	weixin.controller('chatshowCtrl', ['$scope','$Math','$routeParams', function($scope,$Math,$routeParams){
+		$scope.data = $Math.getData()[$routeParams.id].history;
+	}])
+	weixin.config(['$routeProvider',function ($routeProvider) {
+		$routeProvider.when('/',{
+			controller:'chatCtrl',
+			templateUrl:'chat'
+		}).when('/me',{
+			templateUrl:'me'
+		}).when('/chatshow/:id',{
+			controller:'chatshowCtrl',
+			templateUrl:'chatshow'
+		})
+	}])
+</script>
+</html>

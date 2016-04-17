@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="angular.js"></script>
+	<style>
+	body{
+		font-family: Arial;
+	}
+	*{
+		cursor:default;
+	}
+	ul{
+		list-style: none;
+	}
+	span{
+		display: inline-block;
+		width:16%;
+	}
+	</style>
+</head>
+<body ng-controller="myctrl">
+	<ul>
+		<input type="text" ng-model="s">
+		<input type="range" ng-model="li" min="1" max="100" step="1">
+		<li>
+			<span>编号</span>	
+			<span ng-click="od='name';r=!r">姓名</span>	
+			<span ng-click="od='age';r=!r">年龄</span>	
+			<span ng-click="od='sex'; r=!r">性别</span>	
+			<span ng-click="od='score'; r=!r">分数</span>	
+		</li>
+		<li ng-repeat="value in data | jige">
+			<span>{{$index+1}}</span>
+			<span>{{value.name|formatname}}</span>		
+			<span>{{value.age}}</span>		
+			<span>{{value.sex|nannvtozhongwen}}</span>		
+			<span>{{value.score|number:2}}</span>		
+		</li>
+	</ul>
+</body>
+<script>
+	var myapp = angular.module('myapp',[]);
+	myapp.filter('jige',[function() {
+		return function(e) {
+			var r  = [];
+			for(var i=0; i<e.length; i++){
+				if(e[i].score　>= 60 ){
+					r.push(e[i]);
+				}
+			}
+			return r;
+		}
+	}])
+	myapp.filter('formatname',[function(){
+		return function (e) {
+			return (e.length>3)?e.slice(0,3)+'..':e;
+		}
+	}])
+	myapp.filter('nannvtozhongwen',[function () {
+		return function (e) {
+			return (e == 'nv')?'女':'男';
+		}
+	}]);
+	myapp.controller('myctrl', ['$scope', function($scope){
+		$scope.data = [
+			{name:'张二',age:12,sex:'nan',score:37},
+			{name:'李二',age:22,sex:'nv',score:87},
+			{name:'王三虎一',age:18,sex:'nv',score:97},
+			{name:'赵三龙无二',age:17,sex:'nan',score:58},
+			{name:'钱三猫无双',age:13,sex:'nan',score:47},
+			{name:'孙三狗',age:14,sex:'nv',score:67},
+			{name:'吴二',age:15,sex:'nv',score:77},
+			{name:'郑二',age:21,sex:'nan',score:54},
+			{name:'刘四',age:31,sex:'nan',score:81}
+		];
+		$scope.li = $scope.data.length;
+		$scope.findy = function(e) {
+			return e.score >= 60;
+		}
+	}])
+</script>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #el{
+        width: 100px;
+        height: 100px;
+        border:1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="input" type="text" name="name">
+    <div id="el">
+      <span id="span">1</span>
+    </div>
+
+    <ul id="ul">
+    </ul>
+    <button id="huan" type="button" name="button">换一批</button>
+
+    <style media="screen">
+      .test {
+        border:1px solid black;
+        width:300px;
+        height:300px;
+        position: relative;
+      }
+      .kuai{
+        position: absolute;
+        padding: 30px;
+        top:30px;
+        left:140px;
+        border: 1px solid red;
+      }
+      .kuai2{
+        top:140px;
+        left:100px;
+      }
+    </style>
+    <div class="test" id="test">
+      <div class="kuai">1</div>
+      <div class="kuai kuai2">2</div>
+    </div>
+
+  </body>
+  <script type="text/javascript">
+
+  var pre;
+  var xuanzhong = function () {
+    if(pre){
+      pre.removeAttribute('xuanzhong');
+      pre.style.background = 'none';
+    }
+    this.style.background = 'red';
+    this.setAttribute('xuanzhong','true');
+    pre = this;
+  }
+  Array.prototype.forEach.call(test.children,function(value,index){
+    value.addEventListener('click',xuanzhong,false);
+  });
+
+  var copy = function (e) {
+    if(e.ctrlKey){
+      if(e.keyCode == 99 || e.keyCode == 67){
+        var el = test.querySelector('div[xuanzhong]');
+        if(el){
+          var xinel = el.cloneNode(true);
+          xinel.style.left = weizhi.x + 'px';
+          xinel.style.top = weizhi.y + 'px';
+          xinel.removeAttribute('xuanzhong');
+          xinel.style.background = 'none';
+          test.appendChild(xinel);
+        }
+      }
+    }
+  }
+  document.addEventListener('keydown',copy,false);
+  var weizhi = {x:0,y:0};
+  test.addEventListener('mousemove',function(e){
+    weizhi.x = e.offsetX;
+    weizhi.y = e.offsetY;
+  },false);
+
+
+  //浏览器默认行为双击时会选中div内的文字
+  //我们在ondblclick中阻止浏览器的默认行为不管用
+  //要把阻止默认行为的代码添加到onmousedown
+  test.onmousedown = function (ev) {
+    ev.preventDefault();
+  }
+
+  var gaibianyanse = function (ev) {
+    if(ev.ctrlKey){
+      this.style.background = 'red';
+    }
+  }
+  test.addEventListener('click',gaibianyanse,false);
+
+
+
+  var dao1120zidongbianhong = new Event('zidongbianhong');
+  var bianhong = function () {
+    this.style.background = 'red'
+  }
+  test.addEventListener('zidongbianhong',bianhong,false);
+  // setInterval(function () {
+  //   var date = new Date();
+  //   if (date.getHours() === 11 && date.getMinutes() === 23){
+  //     test.dispatchEvent(dao1120zidongbianhong);
+  //   }
+  // },1000);
+
+
+  //1.正常方式
+  var ul = document.getElementById('ul');
+  var huan = document.getElementById('huan');
+  var data = [1,2,3,4,5];
+
+  for(var i=0; i<data.length; i++){
+    var el = document.createElement('li');
+    el.innerHTML = data[i];
+    ul.appendChild(el);
+  }
+  var huanshuju = function () {
+    for(var i=0; i<data.length; i++){
+      data[i] = data[i]*2;
+    }
+    // ul.dispatchEvent(shujubiandong);
+  }
+  var huanui = function () {
+    for(var i=0; i<data.length; i++){
+      ul.children[i].innerHTML = data[i];
+    }
+  }
+  huan.addEventListener('click',huanshuju,false);
+  // huan.addEventListener('click',huanui,false);
+  var shujubiandong = new Event('biandong');
+  ul.addEventListener('biandong',huanui,false);
+
+  //---------------------------------------
+    // onxxxx的方式添加的事件的缺点
+    // 1.因为onxxx是dom对象身上的属性
+      // 所以后续的赋值会覆盖前面的赋值
+    // 2.不能针对同一个事件添加多个处理函数
+    // var updatenewsdata = function () {
+    // }
+    // el.onclick = updatenewsdata;
+    // var elclick = function () {
+    //   alert('el');
+    // }
+    // var elclick2 = function () {
+    //   alert('el2')
+    // }
+    // var spanclick = function () {
+    //   alert('span');
+    // }
+    // el.addEventListener('click',elclick,true);
+    // el.addEventListener('click',elclick2,true);
+    // el.removeEventListener('click',elclick2,true);
+    // span.addEventListener('click',spanclick,false);
+    //addEventListener的优点
+    //可以选择捕获型事件   设置第三个参数为 true;
+    //可以给一个元素注册多个同类型的事件
+
+
+    // var input = document.getElementById('input');
+    // input.onkeydown = function () {
+    //   console.log('keydown');
+    // }
+    // input.onkeyup = function () {
+    //   console.log('keyup');
+    // }
+    // //只有按键产生可打印字符的时候触发
+    // input.onkeypress = function () {
+    //   console.log('keypress');
+    // }
+    // input.onchange = function () {
+    //   console.log('change');
+    // }
+    // input.onblur  = function () {
+    //   console.log('blur');
+    // }
+    // input.onfocus = function () {
+    //   console.log('focus')
+    // }
+    //
+    // var div = document.getElementById('el');
+    //
+
+    //为什么给innerHTML赋值 浏览器中元素会发生变化
+    //为什么给onclick赋值,浏览器会在用户点击的时候自动调用赋值的函数
+    // obj = {
+      // a:8, //对这个值的读写不带有任何多余的行为
+      //当一个值的读写带有一些额外操作的时候
+      //使用 getter setter 来操作
+    //   get width(){
+    //     return div.offsetWidth*this.a;
+    //   },
+    //   set width(value){
+    //     div.style.width = this.a*value + 'px';
+    //   }
+    //   // get set 内部可以通过this使用对象内部的其他属性
+    //   // 但是不能使用 this.自己 = xx ;
+    // }
+    // 浏览器中的evnetsloop
+
+  </script>
+</html>
